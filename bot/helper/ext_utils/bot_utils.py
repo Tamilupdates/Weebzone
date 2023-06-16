@@ -729,7 +729,7 @@ def bot_sys_stats():
 🎮 RAM: [ {mem_t} ] {mem_p}%
 💾 Disk: [ {total} ] {disk}%
 🔺 Send: {sent}
-🔻Recv : {recv}
+🔻 Recv : {recv}
 ♻️ TOTAL : {tasks}
 """
     return stats
