@@ -291,15 +291,15 @@ help_string_telegraph_admin = f'''
 <br><br>
 • <b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot
 <br><br>
-• <b>/{BotCommands.AuthorizeCommand}</b>: Authorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
+• <b>/authorize</b>: Authorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
 <br><br>
-• <b>/{BotCommands.UnAuthorizeCommand}</b>: Unauthorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
+• <b>/unauthorize</b>: Unauthorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
 <br><br>
-• <b>/{BotCommands.UsersCommand}</b>: show users settings (Only Owner & Sudo).
+• <b>/users</b>: show users settings (Only Owner & Sudo).
 <br><br>
-• <b>/{BotCommands.AddSudoCommand}</b>: Add sudo user (Only Owner)
+• <b>/addsudo</b>: Add sudo user (Only Owner)
 <br><br>
-• <b>/{BotCommands.RmSudoCommand}</b>: Remove sudo users (Only Owner)
+• <b>/rmsudo</b>: Remove sudo users (Only Owner)
 <br><br>
 • <b>/{BotCommands.PaidUsersCommand}</b>: Show Paid users (Only Owner & Sudo)
 <br><br>
@@ -355,7 +355,6 @@ if config_dict['SET_BOT_COMMANDS']:
         (f'{BotCommands.ListCommand}','Search in Drive'),
         (f'{BotCommands.SearchCommand}','Search in Torrent'),
         (f'{BotCommands.UserSetCommand[0]}','Users settings'),
-        (f'{BotCommands.BotSetCommand[0]}','BOT settings'),
         (f'{BotCommands.StatusCommand}','Get mirror status message'),
         (f'{BotCommands.SpeedCommand[0]}','Speedtest'),
         (f'{BotCommands.WayBackCommand}','Internet Archive'),
@@ -365,7 +364,6 @@ if config_dict['SET_BOT_COMMANDS']:
         (f'{BotCommands.RestartCommand}','Restart the bot'),
         (f'{BotCommands.LogCommand}','Get the bot Log'),
         (f'{BotCommands.HelpCommand}','Get detailed help'),
-        (f'{BotCommands.LimitCommand}','Get Bot Limitation')
     ]
 
 
