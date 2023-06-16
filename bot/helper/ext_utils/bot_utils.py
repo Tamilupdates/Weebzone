@@ -364,12 +364,10 @@ def get_readable_message():
         else:
             TASKS_COUNT = f"<b>Tasks Running:</b> {len(download_dict)}\n"
         if config_dict['EMOJI_THEME']:
-            bmsg = f"🖥 {TASKS_COUNT}"
             bmsg += f"<b>🖥 CPU:</b> {cpu_percent()}% | <b>💿 FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
             bmsg += f"\n<b>🎮 RAM:</b> {virtual_memory().percent}% | <b>🟢 UP:</b> {get_readable_time(time() - botStartTime)}"
             bmsg += f"\n<b>🔻 DL:</b> {get_readable_file_size(dl_speed)}/s | <b>🔺 UL:</b> {get_readable_file_size(up_speed)}/s\n\n"
         else:
-            bmsg = f"{TASKS_COUNT}"
             bmsg += f"<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
             bmsg += f"\n<b>RAM:</b> {virtual_memory().percent}% | <b>UP:</b> {get_readable_time(time() - botStartTime)}"
             bmsg += f"\n<b>DL:</b> {get_readable_file_size(dl_speed)}/s | <b>UL:</b> {get_readable_file_size(up_speed)}/s\n\n"
@@ -571,7 +569,7 @@ def change_filename(file_, user_id_, dirpath=None, up_path=None, all_edit=True, 
     if PREFIX:
         PREFIX = PREFIX.replace('\s', ' ')
         if not file_.startswith(PREFIX):
-            file_ = f"{PREFIX}{file_}"
+            file_ = f"{PREFIX} {file_}"
     if SUFFIX and not mirror_type:
         SUFFIX = SUFFIX.replace('\s', ' ')
         sufLen = len(SUFFIX)
