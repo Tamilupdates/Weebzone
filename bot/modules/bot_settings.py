@@ -41,9 +41,9 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 60,
                   'CREDIT_NAME': '@Nanthakps',
                   'NAME_FONT': 'i',
                   'CAPTION_FONT': 'b',
-                  'FINISHED_PROGRESS_STR': '■',
-                  'UN_FINISHED_PROGRESS_STR': '□',
-                  'MULTI_WORKING_PROGRESS_STR': '□ □ □ □ □ □ □ □'.split(' '),
+                  'FINISHED_PROGRESS_STR': '●',
+                  'UN_FINISHED_PROGRESS_STR': '○',
+                  'MULTI_WORKING_PROGRESS_STR': '⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ○'.split(' '),
                   'IMAGE_URL': 'https://graph.org/file/6b22ef7b8a733c5131d3f.jpg',
                   'TIMEZONE': 'Asia/Kolkata',
                   'LIST_MODE': "Telegraph",
@@ -634,9 +634,9 @@ def load_config():
     MULTI_WORKING_PROGRESS_STR = environ.get('MULTI_WORKING_PROGRESS_STR', '')
     MULTI_WORKING_PROGRESS_STR = MULTI_WORKING_PROGRESS_STR.split(' ')
     if len(FINISHED_PROGRESS_STR) == 0 or len(FINISHED_PROGRESS_STR) == 0 or len(MULTI_WORKING_PROGRESS_STR) == 0:
-        FINISHED_PROGRESS_STR = '█' # '■'
-        UN_FINISHED_PROGRESS_STR = '▒' # '□'
-        MULTI_WORKING_PROGRESS_STR = '▁ ▂ ▃ ▄ ▅ ▆ ▇'.split(' ')
+        FINISHED_PROGRESS_STR = '█' # '●'
+        UN_FINISHED_PROGRESS_STR = '▒' # '○'
+        MULTI_WORKING_PROGRESS_STR = '⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ⬤'.split(' ')
 
 
     IMAGE_URL = environ.get('IMAGE_URL', '')

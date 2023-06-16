@@ -217,8 +217,8 @@ def progress_bar(percentage):
         percentage = int(percentage)
     except Exception:
         percentage = 0
-    comp = "■"
-    ncomp = "□"
+    comp = "●"
+    ncomp = "○"
     return "".join(comp if i <= percentage // 10 else ncomp for i in range(1, 10))
 
 def timeformatter(milliseconds: int) -> str:
