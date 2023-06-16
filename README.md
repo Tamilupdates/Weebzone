@@ -70,7 +70,7 @@ Copyright (C) 2022 infotamizhan
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program. < https://github.com/Tamilupdates/weebzone/blob/beta/LICENSE >.
+    along with this program. < https://github.com/Tamilupdates/weebzone/blob/master/LICENSE >.
 ```
 
 ---
