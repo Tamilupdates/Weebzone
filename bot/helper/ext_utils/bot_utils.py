@@ -377,25 +377,24 @@ def get_readable_message():
         buttons = ButtonMaker()
         buttons.sbutton("Refresh", "status refresh")
         buttons.sbutton("Statistics", str(THREE))
-        buttons.buildbutton(f"Master", f"https://telegram.me/Nanthakps")
         buttons.sbutton("Close", "status close")
-        sbutton = buttons.build_menu(2)
+        sbutton = buttons.build_menu(3)
         
-        buttons = ButtonMaker()
-        if config_dict['EMOJI_THEME']:
-            buttons.sbutton("⏪Previous", "status pre")
-            buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
-            buttons.sbutton("Next⏩", "status nex")
-            buttons.sbutton("Refresh", "status refresh")
-            buttons.buildbutton(f"Master", f"https://telegram.me/Nanthakps")
-            buttons.sbutton("Close", "status close")
-        else:
-            buttons.sbutton("Previous", "status pre")
-            buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
-            buttons.sbutton("Next", "status nex")
-            buttons.sbutton("Refresh", "status refresh")
-            buttons.buildbutton(f"Master", f"https://telegram.me/Nanthakps")
-            buttons.sbutton("Close", "status close")
+        if STATUS_LIMIT and tasks > STATUS_LIMIT:
+            msg += f"<b>Tasks:</b> {tasks}\n"
+            buttons = ButtonMaker()
+            if config_dict['EMOJI_THEME']:
+                buttons.sbutton("⏪Previous", "status pre")
+                buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
+                buttons.sbutton("Next⏩", "status nex")
+                buttons.sbutton("Refresh", "status refresh")
+                buttons.sbutton("Close", "status close")
+            else:
+                buttons.sbutton("Previous", "status pre")
+                buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
+                buttons.sbutton("Next", "status nex")
+                buttons.sbutton("Refresh", "status refresh")
+                buttons.sbutton("Close", "status close")
             button = buttons.build_menu(3)
             return msg + bmsg, button
         return msg + bmsg, sbutton
