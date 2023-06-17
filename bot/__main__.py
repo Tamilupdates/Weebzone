@@ -431,14 +431,14 @@ def main():
                     msg = f"Bot Restarted Successfully❗\n"
                 else:
                     msg = f"Bot Restarted!\n"
-                msg += f"Date: {date}\n"
+                msg += f"\nDate: {date}\n"
                 msg += f"Time: {time}\n"
                 msg += f"Time Zone: {timez}\n"
-                msg += f"Repo Version: {version}\n\n"
+                msg += f"Version: {version}\n\n"
                 msg += f"Incomplete Tasks ⬇️ \n"
                 
                 for tag, links in data.items():
-                    msg += f"\n{tag}: "
+                    msg += f"{tag}: "
                     for index, link in enumerate(links, start=1):
                         msg += f" <a href='{link}'>{index}</a> |"
                         if len(msg.encode()) > 4000:
@@ -468,13 +468,13 @@ def main():
 
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
-            chat_id, msg_id = map(int, f)
+            chat_id, msg_id = map(int, f)``
         try:
             msg = f"Bot Restarted Successfully❗\n"
-            msg += f"Date: {date}\n"
+            msg += f"\nDate: {date}\n"
             msg += f"Time: {time}\n"
             msg += f"Time Zone: {timez}\n"
-            msg += f"Repo Version: {version}"            
+            msg += f"Version: {version}"            
             bot.edit_message_text(msg, chat_id, msg_id)
         except Exception as e:
             LOGGER.info(e)
