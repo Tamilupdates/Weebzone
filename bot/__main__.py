@@ -468,7 +468,7 @@ def main():
 
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
-            chat_id, msg_id = map(int, f)``
+            chat_id, msg_id = map(int, f)
         try:
             msg = f"Bot Restarted Successfully❗\n"
             msg += f"\nDate: {date}\n"
