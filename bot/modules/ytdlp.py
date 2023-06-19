@@ -467,13 +467,13 @@ def ytdlZipleech(update, context):
 
 
 authfilter = CustomFilters.authorized_chat if config_dict['WATCH_ENABLED'] is True else CustomFilters.owner_filter
-ytdl_handler = CommandHandler(BotCommands.YtdlCommand, ytdl,
+ytdl_handler = CommandHandler(BotCommands.WatchCommand, ytdl,
                                     filters=authfilter | CustomFilters.authorized_user)
-ytdl_zip_handler = CommandHandler(BotCommands.YtdlZipCommand, ytdlZip,
+ytdl_zip_handler = CommandHandler(BotCommands.ZipWatchCommand, ytdlZip,
                                     filters=authfilter | CustomFilters.authorized_user)
-ytdl_leech_handler = CommandHandler(BotCommands.YtdlLeechCommand, ytdlleech,
+ytdl_leech_handler = CommandHandler(BotCommands.ZipLeechWatchCommand, ytdlleech,
                                     filters=authfilter | CustomFilters.authorized_user)
-ytdl_zip_leech_handler = CommandHandler(BotCommands.YtdlZipLeechCommand, ytdlZipleech,
+ytdl_zip_leech_handler = CommandHandler(BotCommands.WatchCommand, ytdlZipleech,
                                     filters=authfilter | CustomFilters.authorized_user)
 
 
