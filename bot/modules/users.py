@@ -41,14 +41,14 @@ def bot_limit(update, context):
     total_task = 'No Limit Set' if TOTAL_TASKS_LIMIT == '' else f'{TOTAL_TASKS_LIMIT} Total Tasks/Time'
     user_task = 'No Limit Set' if USER_TASKS_LIMIT == '' else f'{USER_TASKS_LIMIT} Tasks/user'
 
-    limit = f"<b>BOT LIMITATIONS:</b>\n\n"\
-                f"<b>• Torrent-Direct:</b> {torrent_direct}\n"\
-                f"<b>• Zip-Unzip:</b> {zip_unzip}\n"\
-                f"<b>• Leech:</b> {leech_limit}\n"\
-                f"<b>• Clone:</b> {clone_limit}\n"\
-                f"<b>• Mega:</b> {mega_limit}\n"\
-                f"<b>• Total Tasks:</b> {total_task}\n"\
-                f"<b>• User Tasks:</b> {user_task}\n\n"
+    limit = f"<b>🔢 Bot Limitations:</b>\n\n"\
+                f"<b>🧲 Torrent/Direct:</b> {torrent_direct}\n"\
+                f"<b>🔐 Zip/Unzip:</b> {zip_unzip}\n"\
+                f"<b>🔷 Leech:</b> {leech_limit}\n"\
+                f"<b>♻️ Clone:</b> {clone_limit}\n"\
+                f"<b>🔰 Mega:</b> {mega_limit}\n"\
+                f"<b>💣 Total Tasks:</b> {total_task}\n"\
+                f"<b>🔫 User Tasks:</b> {user_task}\n\n"
 
     if config_dict['PICS']:
         sendPhoto(limit, context.bot, update.message, rchoice(config_dict['PICS']))

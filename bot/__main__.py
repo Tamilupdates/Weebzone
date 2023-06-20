@@ -124,23 +124,24 @@ def stats(update, context):
         user_task = 'No Limit Set' if USER_TASKS_LIMIT == '' else f'{USER_TASKS_LIMIT} Tasks/user'
 
         if config_dict['EMOJI_THEME']: 
-            stats += f'<b>🔢 Bot Limitations </b>\n'\
-                     f'🧲 Torrent/Direct: {torrent_direct}\n'\
-                     f'🔐 Zip/Unzip: {zip_unzip}\n'\
-                     f'🔷 Leech: {leech_limit}\n'\
-                     f'♻️ Clone: {clone_limit}\n'\
-                     f'🔰 Mega: {mega_limit}\n'\
-                     f'💣 Total Tasks: {total_task}\n'\
-                     f'🔫 User Tasks: {user_task}\n\n'
+            stats += f'<b>╭─《 ⚠️ BOT LIMITS ⚠️ 》</b>\n'\
+                     f'<b>├ 🧲 Torrent/Direct: </b>{torrent_direct}\n'\
+                     f'<b>├ 🔐 Zip/Unzip: </b>{zip_unzip}\n'\
+                     f'<b>├ 🔷 Leech: </b>{leech_limit}\n'\
+                     f'<b>├ ♻️ Clone: </b>{clone_limit}\n'\
+                     f'<b>├ 🔰 Mega: </b>{mega_limit}\n'\
+                     f'<b>├ 💣 Total Tasks: </b>{total_task}\n'\
+                     f'<b>╰ 🔫 User Tasks: </b>{user_task}\n\n'
         else: 
-            stats += f'<b>🔢 Bot Limitations </b>\n'\
-                     f'Torrent/Direct: {torrent_direct}\n'\
-                     f'Zip/Unzip: {zip_unzip}\n'\
-                     f'Leech: {leech_limit}\n'\
-                     f'Clone: {clone_limit}\n'\
-                     f'Mega: {mega_limit}\n'\
-                     f'Total Tasks: {total_task}\n'\
-                     f'User Tasks: {user_task}\n\n'
+            stats += f'<b>╭─《 ⚠️ BOT LIMITS ⚠️ 》</b>\n'\
+                     f'<b>├  Torrent/Direct: </b>{torrent_direct}\n'\
+                     f'<b>├  Zip/Unzip: </b>{zip_unzip}\n'\
+                     f'<b>├  Leech: </b>{leech_limit}\n'\
+                     f'<b>├  Clone: </b>{clone_limit}\n'\
+                     f'<b>├  Mega: </b>{mega_limit}\n'\
+                     f'<b>├  Total Tasks: </b>{total_task}\n'\
+                     f'<b>╰  User Tasks: </b>{user_task}\n\n'
+
 
     if config_dict['PICS']:
         sendPhoto(stats, context.bot, update.message, rchoice(config_dict['PICS']))
@@ -421,21 +422,21 @@ def main():
                 if ospath.isfile(".restartmsg"):
                     with open(".restartmsg") as f:
                         chat_id, msg_id = map(int, f)
-                    msg = f"Bot Restarted Successfully❗\n"
+                    msg = f"😎 Restarted Successfully❗\n"
                 else:
-                    msg = f"Bot Restarted!\n"
-                msg += f"\nDate: {date}\n"
-                msg += f"Time: {time}\n"
-                msg += f"Time Zone: {timez}\n"
-                msg += f"Version: {version}\n\n"
-                msg += f"Incomplete Tasks ⬇️ \n"
+                    msg = f"😎 Bot Restarted!\n"
+                msg += f"📅 DATE: {date}\n"
+                msg += f"⌚ TIME: {time}\n"
+                msg += f"🌐 TIMEZONE: {timez}\n"
+                msg += f"🤖 VERSION: {version}\n\n"
+                msg += f"INCOMPLETE TASKS ⬇️ \n"
                 
                 for tag, links in data.items():
                     msg += f"{tag}: "
                     for index, link in enumerate(links, start=1):
                         msg += f" <a href='{link}'>{index}</a> |"
                         if len(msg.encode()) > 4000:
-                            if 'Bot Restarted Successfully❗' in msg and cid == chat_id:
+                            if '😎 Restarted Successfully❗' in msg and cid == chat_id:
                                 try:
                                     bot.editMessageText(msg, chat_id, msg_id)
                                 except:
@@ -447,7 +448,7 @@ def main():
                                 except Exception as e:
                                     LOGGER.error(e)
                             msg = ''
-                if 'Bot Restarted Successfully❗' in msg and cid == chat_id:
+                if '😎 Restarted Successfully❗' in msg and cid == chat_id:
                     try:
                         bot.editMessageText(msg, chat_id, msg_id)
                     except:
@@ -463,7 +464,7 @@ def main():
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
         try:
-            msg = f"Bot Restarted Successfully❗\n"
+            msg = f"😎 Restarted Successfully❗\n"
             msg += f"\nDate: {date}\n"
             msg += f"Time: {time}\n"
             msg += f"Time Zone: {timez}\n"
