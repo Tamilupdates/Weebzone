@@ -131,7 +131,7 @@ def stats(update, context):
                      f'<b>├ ♻️ Clone: </b>{clone_limit}\n'\
                      f'<b>├ 🔰 Mega: </b>{mega_limit}\n'\
                      f'<b>├ 💣 Total Tasks: </b>{total_task}\n'\
-                     f'<b>╰ 🔫 User Tasks: </b>{user_task}\n\n'
+                     f'<b>╰─ 🔫 User Tasks: </b>{user_task}\n\n'
         else: 
             stats += f'<b>╭─《 ⚠️ BOT LIMITS ⚠️ 》</b>\n'\
                      f'<b>├  Torrent/Direct: </b>{torrent_direct}\n'\
@@ -140,7 +140,7 @@ def stats(update, context):
                      f'<b>├  Clone: </b>{clone_limit}\n'\
                      f'<b>├  Mega: </b>{mega_limit}\n'\
                      f'<b>├  Total Tasks: </b>{total_task}\n'\
-                     f'<b>╰  User Tasks: </b>{user_task}\n\n'
+                     f'<b>╰─  User Tasks: </b>{user_task}\n\n'
 
 
     if config_dict['PICS']:
