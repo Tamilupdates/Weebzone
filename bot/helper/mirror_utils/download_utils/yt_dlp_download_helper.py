@@ -252,8 +252,8 @@ class YoutubeDLHelper:
             if self.playlist_count > MAX_PLAYLIST:
                 limit_exceeded = f'Leech Playlist limit is {MAX_PLAYLIST}\n'
                 limit_exceeded += f'Your Playlist is {self.playlist_count}'
-        if not limit_exceeded and (YTDLP_LIMIT:= config_dict['YTDLP_LIMIT']) and user_id != OWNER_ID and not is_sudo(user_id) and not is_paid(user_id):
-            limit = YTDLP_LIMIT * 1024**3
+        if not limit_exceeded and (WATCH_LIMIT:= config_dict['WATCH_LIMIT']) and user_id != OWNER_ID and not is_sudo(user_id) and not is_paid(user_id):
+            limit = WATCH_LIMIT * 1024**3
             if self.__size > limit:
                 limit_exceeded = f'Ytldp limit is {get_readable_file_size(limit)}\n'
                 limit_exceeded+= f'Your {"Playlist" if self.is_playlist else "Video"} size\n'

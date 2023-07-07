@@ -372,8 +372,8 @@ USER_TASKS_LIMIT = '' if len(USER_TASKS_LIMIT) == 0 else int(USER_TASKS_LIMIT)
 MAX_PLAYLIST = environ.get('MAX_PLAYLIST', '')
 MAX_PLAYLIST = '' if len(MAX_PLAYLIST) == 0 else int(MAX_PLAYLIST)
 
-YTDLP_LIMIT = environ.get('YTDLP_LIMIT', '')
-YTDLP_LIMIT = '' if len(YTDLP_LIMIT) == 0 else float(YTDLP_LIMIT)
+WATCH_LIMIT = environ.get('WATCH_LIMIT', '')
+WATCH_LIMIT = '' if len(WATCH_LIMIT) == 0 else float(WATCH_LIMIT)
 
 QUEUE_ALL = environ.get('QUEUE_ALL', '')
 QUEUE_ALL = '' if len(QUEUE_ALL) == 0 else int(QUEUE_ALL)
@@ -816,7 +816,7 @@ config_dict = {'ANILIST_ENABLED': ANILIST_ENABLED,
                'START_BTN2_NAME': START_BTN2_NAME,
                'START_BTN2_URL': START_BTN2_URL,
                'WEB_PINCODE': WEB_PINCODE,
-               'YTDLP_LIMIT': YTDLP_LIMIT,
+               'WATCH_LIMIT': WATCH_LIMIT,
                'MAX_PLAYLIST': MAX_PLAYLIST,
                'YT_DLP_QUALITY': YT_DLP_QUALITY,
                'SAFE_MODE': SAFE_MODE}

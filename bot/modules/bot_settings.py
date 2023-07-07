@@ -302,8 +302,8 @@ def load_config():
     MAX_PLAYLIST = environ.get('MAX_PLAYLIST', '')
     MAX_PLAYLIST = '' if len(MAX_PLAYLIST) == 0 else int(MAX_PLAYLIST)
 
-    YTDLP_LIMIT = environ.get('YTDLP_LIMIT', '')
-    YTDLP_LIMIT = '' if len(YTDLP_LIMIT) == 0 else float(YTDLP_LIMIT)
+    WATCH_LIMIT = environ.get('WATCH_LIMIT', '')
+    WATCH_LIMIT = '' if len(WATCH_LIMIT) == 0 else float(WATCH_LIMIT)
 
     QUEUE_ALL = environ.get('QUEUE_ALL', '')
     QUEUE_ALL = '' if len(QUEUE_ALL) == 0 else int(QUEUE_ALL)
@@ -811,7 +811,7 @@ def load_config():
                         'BUTTON_SIX_NAME': BUTTON_SIX_NAME,
                         'BUTTON_SIX_URL': BUTTON_SIX_URL,
                         'WEB_PINCODE': WEB_PINCODE,
-                        'YTDLP_LIMIT': YTDLP_LIMIT,
+                        'WATCH_LIMIT': WATCH_LIMIT,
                         'MAX_PLAYLIST': MAX_PLAYLIST,
                         'SAFE_MODE': SAFE_MODE,
                         'YT_DLP_QUALITY': YT_DLP_QUALITY})
