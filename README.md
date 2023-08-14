@@ -1,7 +1,7 @@
 <p align="center">
     <a href="https://telegram.me/TamilUpdatesOfficial">
         <kbd>
-            <img width="180" src="https://graph.org/file/c39492d4e4a276b2c0cbf.jpg" alt="Tamil Updates Logo">
+            <img width="180" src="https://graph.org/file/c39492d4e4a276b2c0cbf.jpg" alt="Tamil Updates Official">
         </kbd>
     </a>
 </p>
