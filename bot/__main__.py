@@ -207,7 +207,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://telegram.me/Nanthakps'>Nanthakps</a></b> - The Ultimate Telegram Mirror-Leech Bot to Upload Your File & Link in Google Drive & Telegram\
+<b><a href='https://telegram.me/TamilUpdatesOfficial'>Tamil Updates</a></b> - The Ultimate Telegram Mirror-Leech Bot to Upload Your File & Link in Google Drive & Telegram\
 \n\n<b>Choose A Help Category:</b>
 '''
 

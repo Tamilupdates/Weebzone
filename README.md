@@ -1,7 +1,7 @@
 <p align="center">
-    <a href="https://telegram.me/Nanthakps">
+    <a href="https://telegram.me/TamilUpdatesOfficial">
         <kbd>
-            <img width="180" src="https://graph.org/file/c2f574670f937de672ad0.jpg" alt="Nanthakps Logo">
+            <img width="180" src="https://graph.org/file/c39492d4e4a276b2c0cbf.jpg" alt="Tamil Updates Logo">
         </kbd>
     </a>
 </p>
@@ -17,7 +17,7 @@
 [![](https://img.shields.io/github/repo-size/Tamilupdates/weebzone?color=green&label=Repo%20Size&labelColor=292c3b)](#) [![](https://img.shields.io/github/commit-activity/m/Tamilupdates/weebzone?logo=github&labelColor=292c3b&label=Github%20Commits)](#) [![](https://img.shields.io/github/license/Tamilupdates/weebzone?style=flat&label=License&labelColor=292c3b)](#)|[![](https://img.shields.io/github/issues-raw/Tamilupdates/weebzone?style=flat&label=Open%20Issues&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-closed-raw/Tamilupdates/weebzone?style=flat&label=Closed%20Issues&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-pr-raw/Tamilupdates/weebzone?style=flat&label=Open%20Pull%20Requests&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-pr-closed-raw/Tamilupdates/weebzone?style=flat&label=Closed%20Pull%20Requests&labelColor=292c3b)](#)
 :---:|:---:|
 [![](https://img.shields.io/github/languages/count/Tamilupdates/weebzone?style=flat&label=Total%20Languages&labelColor=292c3b&color=blueviolet)](#) [![](https://img.shields.io/github/languages/top/Tamilupdates/weebzone?style=flat&logo=python&labelColor=292c3b)](#) [![](https://img.shields.io/github/last-commit/Tamilupdates/weebzone?style=flat&label=Last%20Commit&labelColor=292c3b&color=important)](#) [![](https://badgen.net/github/branches/Tamilupdates/weebzone?label=Total%20Branches&labelColor=292c3b)](#)|[![](https://img.shields.io/github/forks/Tamilupdates/weebzone?style=flat&logo=github&label=Forks&labelColor=292c3b&color=critical)](#) [![](https://img.shields.io/github/stars/Tamilupdates/weebzone?style=flat&logo=github&label=Stars&labelColor=292c3b&color=yellow)](#) [![](https://badgen.net/docker/pulls/KPSML/Tamilupdates?icon=docker&label=Pulls&labelColor=292c3b&color=blue)](#)
-[![](https://img.shields.io/badge/Telegram%20Channel-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://telegram.me/KPSTorrent) |[![](https://img.shields.io/badge/Support%20Group-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://telegram.me/TorrentLeechGroup) |
+[![](https://img.shields.io/badge/Telegram%20Channel-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://telegram.me/TamilUpdateOfficial) |[![](https://img.shields.io/badge/Support%20Group-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://telegram.me/TorrentLeechGroup) |
 
 </div>
 
