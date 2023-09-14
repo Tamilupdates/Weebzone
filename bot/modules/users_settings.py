@@ -259,7 +259,7 @@ async def update_user_settings(query, key=None, edit_type=None, edit_mode=None, 
 async def user_settings(client, message):
     if len(message.command) > 1 and message.command[1] == '-s':
         set_arg = message.command[2].strip() if len(message.command) > 2 else None
-        msg = await sendMessage(message, '<i>Fetching Settings...</i>', photo='IMAGES')
+        msg = await sendMessage(message, '<b>Fetching Settings...</b>', photo='IMAGES')
         if set_arg and (reply_to := message.reply_to_message):
             if message.from_user.id != reply_to.from_user.id:
                 return await editMessage(msg, '<i>Reply to Your Own Message for Setting via Args Directly</i>')

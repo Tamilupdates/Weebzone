@@ -688,7 +688,7 @@ async def get_buttons(key=None, edit_type=None, edit_mode=None, mess=None):
         buttons.ibutton('Qbit Settings', "botset qbit")
         buttons.ibutton('Aria2c Settings', "botset aria")
         buttons.ibutton('Close', "botset close")
-        msg = '<b><i>Bot Settings:</i></b>'
+        msg = '<b><Bot Settings:</b>'
     elif key == 'var':
         for k in list(OrderedDict(sorted(config_dict.items())).keys())[START:10+START]:
             buttons.ibutton(k, f"botset editvar {k}")
