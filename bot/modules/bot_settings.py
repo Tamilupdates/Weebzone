@@ -450,7 +450,7 @@ async def load_config():
     SAVE_MSG = environ.get('SAVE_MSG', '')
     SAVE_MSG = SAVE_MSG.lower() == 'true'
 
-    SET_COMMANDS = environ.get('SET_COMMANDS', 'True')
+    SET_COMMANDS = environ.get('SET_COMMANDS', '')
     SET_COMMANDS = SET_COMMANDS.lower() == 'true'
     
     SAFE_MODE = environ.get('SAFE_MODE', '')
