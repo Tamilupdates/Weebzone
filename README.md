@@ -1,7 +1,7 @@
 <p align="center">
-    <a href="https://github.com/weebzone/WZML">
+    <a href="https://telegram.me/TamilUpdatesOfficial">
         <kbd>
-            <img width="250" src="https://graph.org/file/639fe4239b78e5862b302.jpg" alt="WZML-X Logo">
+        <img width="180" src="https://graph.org/file/c39492d4e4a276b2c0cbf.jpg" alt="Tamil Updates Official">
         </kbd>
     </a>
 
@@ -13,10 +13,10 @@
 
 ----
 
-[![](https://img.shields.io/github/repo-size/weebzone/WZML-X?color=green&label=Repo%20Size&labelColor=292c3b)](#) [![](https://img.shields.io/github/commit-activity/m/weebzone/WZML-X?logo=github&labelColor=292c3b&label=Github%20Commits)](#) [![](https://img.shields.io/github/license/weebzone/WZML-X?style=flat&label=License&labelColor=292c3b)](#)|[![](https://img.shields.io/github/issues-raw/weebzone/WZML-X?style=flat&label=Open%20Issues&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-closed-raw/weebzone/WZML-X?style=flat&label=Closed%20Issues&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-pr-raw/weebzone/WZML-X?style=flat&label=Open%20Pull%20Requests&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-pr-closed-raw/weebzone/WZML-X?style=flat&label=Closed%20Pull%20Requests&labelColor=292c3b)](#)
+[![](https://img.shields.io/github/repo-size/Tamilupdates/weebzone?color=green&label=Repo%20Size&labelColor=292c3b)](#) [![](https://img.shields.io/github/commit-activity/m/Tamilupdates/weebzone?logo=github&labelColor=292c3b&label=Github%20Commits)](#) [![](https://img.shields.io/github/license/Tamilupdates/weebzone?style=flat&label=License&labelColor=292c3b)](#)|[![](https://img.shields.io/github/issues-raw/Tamilupdates/weebzone?style=flat&label=Open%20Issues&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-closed-raw/Tamilupdates/weebzone?style=flat&label=Closed%20Issues&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-pr-raw/Tamilupdates/weebzone?style=flat&label=Open%20Pull%20Requests&labelColor=292c3b)](#) [![](https://img.shields.io/github/issues-pr-closed-raw/Tamilupdates/weebzone?style=flat&label=Closed%20Pull%20Requests&labelColor=292c3b)](#)
 :---:|:---:|
-[![](https://img.shields.io/github/languages/count/weebzone/WZML-X?style=flat&label=Total%20Languages&labelColor=292c3b&color=blueviolet)](#) [![](https://img.shields.io/github/languages/top/weebzone/WZML-X?style=flat&logo=python&labelColor=292c3b)](#) [![](https://img.shields.io/github/last-commit/weebzone/WZML-X?style=flat&label=Last%20Commit&labelColor=292c3b&color=important)](#) [![](https://badgen.net/github/branches/weebzone/WZML-X?label=Total%20Branches&labelColor=292c3b)](#)|[![](https://img.shields.io/github/forks/weebzone/WZML-X?style=flat&logo=github&label=Forks&labelColor=292c3b&color=critical)](#) [![](https://img.shields.io/github/stars/weebzone/WZML-X?style=flat&logo=github&label=Stars&labelColor=292c3b&color=yellow)](#) [![](https://badgen.net/docker/pulls/codewithweeb/weebzone?icon=docker&label=Pulls&labelColor=292c3b&color=blue)](#)
-[![](https://img.shields.io/badge/Telegram%20Channel-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://t.me/WZML_X) |[![](https://img.shields.io/badge/Support%20Group-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://t.me/WZML_Support) |
+[![](https://img.shields.io/github/languages/count/Tamilupdates/weebzone?style=flat&label=Total%20Languages&labelColor=292c3b&color=blueviolet)](#) [![](https://img.shields.io/github/languages/top/Tamilupdates/weebzone?style=flat&logo=python&labelColor=292c3b)](#) [![](https://img.shields.io/github/last-commit/Tamilupdates/weebzone?style=flat&label=Last%20Commit&labelColor=292c3b&color=important)](#) [![](https://badgen.net/github/branches/Tamilupdates/weebzone?label=Total%20Branches&labelColor=292c3b)](#)|[![](https://img.shields.io/github/forks/Tamilupdates/weebzone?style=flat&logo=github&label=Forks&labelColor=292c3b&color=critical)](#) [![](https://img.shields.io/github/stars/Tamilupdates/weebzone?style=flat&logo=github&label=Stars&labelColor=292c3b&color=yellow)](#) [![](https://badgen.net/docker/pulls/codewithweeb/weebzone?icon=docker&label=Pulls&labelColor=292c3b&color=blue)](#)
+[![](https://img.shields.io/badge/Telegram%20Channel-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://telegram.me/TamilupdatesOfficial) |[![](https://img.shields.io/badge/Support%20Group-Join-9cf?style=for-the-badge&logo=telegram&logoColor=blue&style=flat&labelColor=292c3b)](https://t.me/WZML_Support) |
 
 </div>
 
@@ -220,7 +220,7 @@
 - Clone this repo:
 
 ```
-git clone https://github.com/weebzone/WZML-X mirrorbot/ && cd mirrorbot
+git clone https://github.com/Tamilupdates/weebzone mirrorbot/ && cd mirrorbot
 ```
 
 - For Debian based distros
@@ -306,7 +306,7 @@ sudo docker stop id
 
 #### Build And Run The Docker Image Using docker-compose
 
-**NOTE**: If you want to use ports other than 80 and 8080 for torrent file selection and rclone serve respectively, change it in [docker-compose.yml](https://github.com/weebzone/WZML-X/blob/master/docker-compose.yml) also.
+**NOTE**: If you want to use ports other than 80 and 8080 for torrent file selection and rclone serve respectively, change it in [docker-compose.yml](https://github.com/Tamilupdates/weebzone/blob/master/docker-compose.yml) also.
 
 - Install docker-compose
 
@@ -427,12 +427,12 @@ help - All cmds with description
         <summary><b>Optional Fields</b></summary>
 
     - `USER_SESSION_STRING`: To download/upload from your telegram account and to send rss. To generate session string use this command `python3 generate_string_session.py` after mounting repo folder for sure. `Str`. **NOTE**: You can't use bot with private message. Use it with superGroup.
-    - `DATABASE_URL`: Your Mongo Database URL (Connection string). Follow this [Generate Database](https://github.com/weebzone/WZML-X/tree/master#generate-database) to generate database. Data will be saved in Database: auth and sudo users, users settings including thumbnails for each user, rss data and incomplete tasks. **NOTE**: You can always edit all settings that saved in database from the official site -> (Browse collections). `Str`
+    - `DATABASE_URL`: Your Mongo Database URL (Connection string). Follow this [Generate Database](https://github.com/Tamilupdates/weebzone/tree/master#generate-database) to generate database. Data will be saved in Database: auth and sudo users, users settings including thumbnails for each user, rss data and incomplete tasks. **NOTE**: You can always edit all settings that saved in database from the official site -> (Browse collections). `Str`
     - `DOWNLOAD_DIR`: The path to the local folder where the downloads should be downloaded to. `Str`
     - `CMD_SUFFIX`: commands index number. This number will added at the end all commands. `Str`|`Int`
     - `AUTHORIZED_CHATS`: Fill user_id and chat_id of groups/users you want to authorize. Separate them by space. `Int`
     - `SUDO_USERS`: Fill user_id of users whom you want to give sudo permission. Separate them by space. `Int`
-    - `DEFAULT_UPLOAD`: Whether `rc` to upload to `RCLONE_PATH` or `gd` to upload to `GDRIVE_ID` or `ddl` to upload to `DDL`. Default is `gd`. Read More [HERE](https://github.com/weebzone/WZML-X/tree/master#upload).`Str`
+    - `DEFAULT_UPLOAD`: Whether `rc` to upload to `RCLONE_PATH` or `gd` to upload to `GDRIVE_ID` or `ddl` to upload to `DDL`. Default is `gd`. Read More [HERE](https://github.com/Tamilupdates/weebzone/tree/master#upload).`Str`
     - `STATUS_UPDATE_INTERVAL`: Time in seconds after which the progress/status message will be updated. Recommended `10` seconds at least. `Int`
     - `AUTO_DELETE_MESSAGE_DURATION`: Interval of time (in seconds), after which the bot deletes it's message and command message which is expected to be viewed instantly. **NOTE**: Set to `-1` to disable auto message deletion. `Int`
     - `STATUS_LIMIT`: Limit the no. of tasks shown in status message with buttons. Default is `10`. **NOTE**: Recommended limit is `4` tasks. `Int`
@@ -441,7 +441,7 @@ help - All cmds with description
     - `UPTOBOX_TOKEN`: Uptobox token to mirror uptobox links. Get it from [Uptobox Premium Account](https://uptobox.com/my_account). `str`
     - `YT_DLP_OPTIONS`: Default yt-dlp options. Check all possible options [HERE](https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184) or use this [script](https://t.me/mltb_official/177) to convert cli arguments to api options. Format: key:value|key:value|key:value. Add `^` before integer or float, some numbers must be numeric and some string. `str`
       - Example: "format:bv*+mergeall[vcodec=none]|nocheckcertificate:True"
-    - `USE_SERVICE_ACCOUNTS`: Whether to use Service Accounts or not, with google-api-python-client. For this to work see [Using Service Accounts](https://github.com/weebzone/WZML-X#generate-service-accounts-what-is-service-account) section below. Default is `False`. `Bool`
+    - `USE_SERVICE_ACCOUNTS`: Whether to use Service Accounts or not, with google-api-python-client. For this to work see [Using Service Accounts](https://github.com/Tamilupdates/weebzone#generate-service-accounts-what-is-service-account) section below. Default is `False`. `Bool`
     - `SAVE_MSG`: Save Button in each file and link so that every user direcly save it without forwarding. Default is `False`. `Bool`
     - `SET_COMMANDS`: Automatically set the Bot Commands no need to set from `@botfather`. Default is `False`. `Bool`
     - `FSUB_IDS`: Fill chat_id(-100xxxxxx) of groups/channel you want to force subscribe. Separate them by space. Int
@@ -475,7 +475,7 @@ help - All cmds with description
         <summary><b>Update</b></summary>
 
     - `UPSTREAM_REPO`: Your github repository link, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. Get token from [Github settings](https://github.com/settings/tokens). So you can update your bot from filled repository on each restart. `Str`.
-       - **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect. DON'T delete .gitignore file. For more information read [THIS](https://github.com/weebzone/WZML-X/tree/master#upstream-repo-recommended).
+       - **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect. DON'T delete .gitignore file. For more information read [THIS](https://github.com/Tamilupdates/weebzone/tree/master#upstream-repo-recommended).
     - `UPSTREAM_BRANCH`: Upstream branch for update. Default is `master`. `Str`
 
     </details></li>
@@ -614,7 +614,7 @@ help - All cmds with description
 **NOTES**
 
 - Old authentication changed, now we can't use bot or replit to generate token.pickle. You need OS with a local browser. For example `Termux`.
-- Windows users should install python3 and pip. You can find how to install and use them from google or from this [telegraph](https://telegra.ph/Create-Telegram-Mirror-Leech-Bot-by-Deploying-App-with-Heroku-Branch-using-Github-Workflow-12-06) from [Wiszky](https://github.com/vishnoe115) tutorial.
+- Windows users should install python3 and pip. You can find how to install and use them from google or from this [telegraph](https://graph.org/Create-Telegram-Mirror-Leech-Bot-by-Deploying-App-with-Heroku-Branch-using-Github-Workflow-12-06) from [Wiszky](https://github.com/vishnoe115) tutorial.
 - You can ONLY open the generated link from `generate_drive_token.py` in local browser.
 
 1. Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
@@ -894,8 +894,8 @@ button_name button_url
 ```
 Example:
 ```
-Repo_❤️ https://github.com/WZML-X 
-Updates https://t.me/WZML_X
+Repo_❤️ https://github.com/Tamilupdates/weebzone 
+Updates https://telegram.me/TamilupdateOfficial
 ```
 - **Note**: If you want to add space in button name use `_` for add space
 

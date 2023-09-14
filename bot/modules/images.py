@@ -40,7 +40,7 @@ async def picture_add(_, message):
         finally:
             await aioremove(photo_dir)
     else:
-        help_msg = "<b>By Replying to Link (Telegra.ph or DDL):</b>"
+        help_msg = "<b>By Replying to Link (graph.org or DDL):</b>"
         help_msg += f"\n<code>/{BotCommands.AddImageCommand}" + " {link}" + "</code>\n"
         help_msg += "\n<b>By Replying to Photo on Telegram:</b>"
         help_msg += f"\n<code>/{BotCommands.AddImageCommand}" + " {photo}" + "</code>"
