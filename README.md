@@ -174,7 +174,7 @@
 - Almost all repository functions have been improved and many other details can't mention all of them
 - Many bugs have been fixed
 - Bot Limits for each user
-- View In Brief on WZML_X Tg Channel
+- View In Brief on Tg Channel
 
 </details>
 <details>

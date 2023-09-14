@@ -202,7 +202,7 @@ async def _mirror_leech(client, message, isQbit=False, isLeech=False, sameDir=No
 
     if not is_url(link) and not is_magnet(link) and not await aiopath.exists(link) and not is_rclone_path(link) and file_ is None:
         btn = ButtonMaker()
-        btn.ibutton('Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Rᴇᴀᴅ Mᴏʀᴇ ...', f'{message.from_user.id} help MIRROR')
+        btn.ibutton('Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Rᴇᴀᴅ Mᴏʀᴇ ...', f'wzmlx {message.from_user.id} help MIRROR')
         await sendMessage(message, MIRROR_HELP_MESSAGE[0], btn.build_menu(1))
         await delete_links(message)
         return
@@ -380,7 +380,7 @@ async def wzmlxcb(_, query):
             startLine = f"<b>Showing Last {ind} Lines from log.txt:</b> \n\n----------<b>START LOG</b>----------\n\n"
             endLine = "\n----------<b>END LOG</b>----------"
             btn = ButtonMaker()
-            btn.ibutton('Cʟᴏsᴇ', f'{user_id} close')
+            btn.ibutton('Cʟᴏsᴇ', f'wzmlx {user_id} close')
             await sendMessage(message, startLine + escape(Loglines) + endLine, btn.build_menu(1))
             await editReplyMarkup(message, None)
         except Exception as err:
@@ -400,23 +400,23 @@ async def wzmlxcb(_, query):
     elif data[2] == "help":
         await query.answer()
         btn = ButtonMaker()
-        btn.ibutton('Cʟᴏsᴇ', f'{user_id} close')
+        btn.ibutton('Cʟᴏsᴇ', f'wzmlx {user_id} close')
         if data[3] == "CLONE":
             await editMessage(message, CLONE_HELP_MESSAGE[1], btn.build_menu(1))
         elif data[3] == "MIRROR":
             if len(data) == 4:
                 msg = MIRROR_HELP_MESSAGE[1][:4000]
-                btn.ibutton('Nᴇxᴛ Pᴀɢᴇ', f'{user_id} help MIRROR readmore')
+                btn.ibutton('Nᴇxᴛ Pᴀɢᴇ', f'wzmlx {user_id} help MIRROR readmore')
             else:
                 msg = MIRROR_HELP_MESSAGE[1][4000:]
-                btn.ibutton('Pʀᴇ Pᴀɢᴇ', f'{user_id} help MIRROR')
+                btn.ibutton('Pʀᴇ Pᴀɢᴇ', f'wzmlx {user_id} help MIRROR')
             await editMessage(message, msg, btn.build_menu(2))
         if data[3] == "YT":
             await editMessage(message, YT_HELP_MESSAGE[1], btn.build_menu(1))
     elif data[2] == "guide":
         btn = ButtonMaker()
-        btn.ibutton('Bᴀᴄᴋ', f'{user_id} guide home')
-        btn.ibutton('Cʟᴏsᴇ', f'{user_id} close')
+        btn.ibutton('Bᴀᴄᴋ', f'wzmlx {user_id} guide home')
+        btn.ibutton('Cʟᴏsᴇ', f'wzmlx {user_id} close')
         if data[3] == "basic":
             await editMessage(message, help_string[0], btn.build_menu(2))
         elif data[3] == "users":
@@ -429,11 +429,11 @@ async def wzmlxcb(_, query):
             await editMessage(message, help_string[2], btn.build_menu(2))
         else:
             buttons = ButtonMaker()
-            buttons.ibutton('Basic', f'{user_id} guide basic')
-            buttons.ibutton('Users', f'{user_id} guide users')
-            buttons.ibutton('Mics', f'{user_id} guide miscs')
-            buttons.ibutton('Owner & Sudos', f'{user_id} guide admin')
-            buttons.ibutton('Close', f'{user_id} close')
+            buttons.ibutton('Basic', f'wzmlx {user_id} guide basic')
+            buttons.ibutton('Users', f'wzmlx {user_id} guide users')
+            buttons.ibutton('Mics', f'wzmlx {user_id} guide miscs')
+            buttons.ibutton('Owner & Sudos', f'wzmlx {user_id} guide admin')
+            buttons.ibutton('Close', f'wzmlx {user_id} close')
             await editMessage(message, "㊂ <b><i>Help Guide Menu!</i></b>\n\n<b>NOTE: <i>Click on any CMD to see more minor detalis.</i></b>", buttons.build_menu(2))
         await query.answer()
     elif data[2] == "stats":

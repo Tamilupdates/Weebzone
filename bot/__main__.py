@@ -127,8 +127,8 @@ async def ping(_, message):
 
 async def log(_, message):
     buttons = ButtonMaker()
-    buttons.ibutton('📑 Log Display', f'{message.from_user.id} logdisplay')
-    buttons.ibutton('📨 Web Paste', f'{message.from_user.id} webpaste')
+    buttons.ibutton('📑 Log Display', f'wzmlx {message.from_user.id} logdisplay')
+    buttons.ibutton('📨 Web Paste', f'wzmlx {message.from_user.id} webpaste')
     await sendFile(message, 'log.txt', buttons=buttons.build_menu(1))
 
 
@@ -161,11 +161,11 @@ async def search_images():
 async def bot_help(client, message):
     buttons = ButtonMaker()
     user_id = message.from_user.id
-    buttons.ibutton('Basic', f'{user_id} guide basic')
-    buttons.ibutton('Users', f'{user_id} guide users')
-    buttons.ibutton('Mics', f'{user_id} guide miscs')
-    buttons.ibutton('Owner & Sudos', f'{user_id} guide admin')
-    buttons.ibutton('Close', f'{user_id} close')
+    buttons.ibutton('Basic', f'wzmlx {user_id} guide basic')
+    buttons.ibutton('Users', f'wzmlx {user_id} guide users')
+    buttons.ibutton('Mics', f'wzmlx {user_id} guide miscs')
+    buttons.ibutton('Owner & Sudos', f'wzmlx {user_id} guide admin')
+    buttons.ibutton('Close', f'wzmlx {user_id} close')
     await sendMessage(message, "㊂ <b><i>Help Guide Menu!</i></b>\n\n<b>NOTE: <i>Click on any CMD to see more minor detalis.</i></b>", buttons.build_menu(2))
 
 

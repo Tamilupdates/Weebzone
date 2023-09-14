@@ -125,7 +125,7 @@ async def get_telegraph_list(telegraph_content):
     if len(path) > 1:
         await telegraph.edit_telegraph(path, telegraph_content)
     buttons = ButtonMaker()
-    buttons.ubutton("🔎 VIEW", f"https://graph.org/{path[0]}")
+    buttons.ubutton("🔎 VIEW", f"https://telegra.ph/{path[0]}")
     buttons = extra_btns(buttons)
     return buttons.build_menu(1)
 
@@ -485,13 +485,13 @@ async def compare_versions(v1, v2):
 async def get_stats(event, key="home"):
     user_id = event.from_user.id
     btns = ButtonMaker()
-    btns.ibutton('Back', f'{user_id} stats home')
+    btns.ibutton('Back', f'wzmlx {user_id} stats home')
     if key == "home":
         btns = ButtonMaker()
-        btns.ibutton('Bot Stats', f'{user_id} stats stbot')
-        btns.ibutton('OS Stats', f'{user_id} stats stsys')
-        btns.ibutton('Repo Stats', f'{user_id} stats strepo')
-        btns.ibutton('Bot Limits', f'{user_id} stats botlimits')
+        btns.ibutton('Bot Stats', f'wzmlx {user_id} stats stbot')
+        btns.ibutton('OS Stats', f'wzmlx {user_id} stats stsys')
+        btns.ibutton('Repo Stats', f'wzmlx {user_id} stats strepo')
+        btns.ibutton('Bot Limits', f'wzmlx {user_id} stats botlimits')
         msg = "⌬ <b><i>Bot & OS Statistics!</i></b>"
     elif key == "stbot":
         total, used, free, disk = disk_usage('/')
@@ -565,7 +565,7 @@ async def get_stats(event, key="home"):
                 UT = ('∞' if (val := config_dict['USER_MAX_TASKS']) == '' else val),
                 BT = ('∞' if (val := config_dict['BOT_MAX_TASKS']) == '' else val),
         )
-    btns.ibutton('Close', f'{user_id} close')
+    btns.ibutton('Close', f'wzmlx {user_id} close')
     return msg, btns.build_menu(2)
 
 
@@ -674,7 +674,7 @@ async def set_commands(client):
             BotCommand(BotCommands.CancelAllCommand[0], f'Cancel all Tasks in whole Bots.'),
             BotCommand(BotCommands.ListCommand, 'Search in Drive(s)'),
             BotCommand(BotCommands.SearchCommand, 'Search in Torrent via qBit clients!'),
-            BotCommand(BotCommands.HelpCommand, 'Get detailed help about the Bot'),
+            BotCommand(BotCommands.HelpCommand, 'Get detailed help about the WZML-X Bot'),
             BotCommand(BotCommands.UserSetCommand[0], f"or /{BotCommands.UserSetCommand[1]} User's Personal Settings (Open in PM)"),
             BotCommand(BotCommands.IMDBCommand, 'Search Movies/Series on IMDB.com and fetch details'),
             BotCommand(BotCommands.AniListCommand, 'Search Animes on AniList.com and fetch details'),
