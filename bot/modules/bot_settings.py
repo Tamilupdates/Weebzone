@@ -38,7 +38,7 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'RSS_DELAY': 600,
                   'STATUS_UPDATE_INTERVAL': 2,
                   'SEARCH_LIMIT': 0,
-                  'UPSTREAM_BRANCH': 'master',
+                  'UPSTREAM_BRANCH': 'latest',
                   'BOT_THEME': 'minimal',
                   'BOT_LANG': 'en',
                   'IMG_PAGE': 1,
@@ -344,7 +344,7 @@ async def load_config():
 
     UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
     if len(UPSTREAM_BRANCH) == 0:
-        UPSTREAM_BRANCH = 'master'
+        UPSTREAM_BRANCH = 'latest'
 
     STORAGE_THRESHOLD = environ.get('STORAGE_THRESHOLD', '')
     STORAGE_THRESHOLD = '' if len(
