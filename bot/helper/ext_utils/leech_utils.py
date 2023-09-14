@@ -225,7 +225,7 @@ async def format_filename(file_, user_id, dirpath=None, isMirror=False):
         nfile_ = prefix.replace('\s', ' ') + file_
         prefix = re_sub('<.*?>', '', prefix).replace('\s', ' ')
         if not file_.startswith(prefix):
-            file_ = f"{prefix}{file_}"
+            file_ = f"{prefix} {file_}"
 
     if suffix and not isMirror:
         suffix = suffix.replace('\s', ' ')
