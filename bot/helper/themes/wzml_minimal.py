@@ -6,7 +6,7 @@ class WZMLStyle:
     ST_BN1_URL = 'https://telegram.me/TamilupdatesOfficial'
     ST_BN2_NAME = 'Updates 🔥'
     ST_BN2_URL = 'https://telegram.me/TamilupdateOfficial'
-    ST_MSG = '''<i>This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram or to ddl servers.</i>
+    ST_MSG = '''<b>This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram or to ddl servers.</b>
 
 <b>Type {help_command} to get a list of available commands</b>'''
     ST_BOTPM = '''<i>Now, This bot will send all your files and links here. Start Using ...</i>'''
@@ -78,7 +78,7 @@ class WZMLStyle:
     # ---------------------
 
     # async def restart(client, message): ---> __main__.py
-    RESTARTING = '<i>Restarting...</i>'
+    RESTARTING = '<b>Restarting...</b>'
     # ---------------------
 
     # async def restart_notification(): ---> __main__.py
@@ -87,11 +87,11 @@ class WZMLStyle:
 ┠ <b>Time:</b> {time}
 ┠ <b>TimeZone:</b> {timz}
 ┖ <b>Version:</b> {version}'''
-    RESTARTED = '''⌬ <b><i>Bot Restarted!</i></b>'''
+    RESTARTED = '''⌬ <b>Bot Restarted!</b>'''
     # ---------------------
 
     # async def ping(client, message): ---> __main__.py
-    PING = '<i>Starting Ping..</i>'
+    PING = '<b>Starting Ping..</b>'
     PING_VALUE = '<b>Pong</b>\n<code>{value} ms..</code>'
     # ---------------------
 

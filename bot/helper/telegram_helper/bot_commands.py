@@ -17,17 +17,17 @@ class _BotCommands:
             self.LeechCommand.extend([f'unzipleech{CMD_SUFFIX}', f'uzl{CMD_SUFFIX}', f'zipleech{CMD_SUFFIX}', f'zl{CMD_SUFFIX}'])
             self.QbLeechCommand.extend([f'qbunzipleech{CMD_SUFFIX}', f'quzl{CMD_SUFFIX}', f'qbzipleech{CMD_SUFFIX}', f'qzl{CMD_SUFFIX}'])
             self.YtdlLeechCommand.extend([f'ytdlzipleech{CMD_SUFFIX}', f'yzl{CMD_SUFFIX}'])
-        self.CloneCommand = [f'clone{CMD_SUFFIX}', f'c{CMD_SUFFIX}']
+        self.CloneCommand = [f'clone{CMD_SUFFIX}', f'cl{CMD_SUFFIX}']
         self.CountCommand = f'count{CMD_SUFFIX}'
         self.DeleteCommand = f'del{CMD_SUFFIX}'
         self.CancelMirror = f'cancel{CMD_SUFFIX}'
         self.CancelAllCommand = [f'cancelall{CMD_SUFFIX}', 'cancellallbot']
-        self.ListCommand = f'list{CMD_SUFFIX}'
+        self.ListCommand = [f'list{CMD_SUFFIX}', 'ls']
         self.SearchCommand = f'search{CMD_SUFFIX}'
         self.StatusCommand = [f'status{CMD_SUFFIX}', f's{CMD_SUFFIX}', 'statusall']
-        self.UsersCommand = f'users{CMD_SUFFIX}'
-        self.AuthorizeCommand = [f'authorize{CMD_SUFFIX}', f'a{CMD_SUFFIX}']
-        self.UnAuthorizeCommand = [f'unauthorize{CMD_SUFFIX}', f'ua{CMD_SUFFIX}']
+        self.UsersCommand = [f'kpsusers{CMD_SUFFIX}', 'usr']
+        self.AuthorizeCommand = [f'kpsauthorize{CMD_SUFFIX}', f'au{CMD_SUFFIX}']
+        self.UnAuthorizeCommand = [f'kpsunauthorize{CMD_SUFFIX}', f'ua{CMD_SUFFIX}']
         self.AddBlackListCommand = [f'blacklist{CMD_SUFFIX}', f'bl{CMD_SUFFIX}']
         self.RmBlackListCommand = [f'rmblacklist{CMD_SUFFIX}', f'rbl{CMD_SUFFIX}']
         self.AddSudoCommand = f'addsudo{CMD_SUFFIX}'
@@ -41,7 +41,7 @@ class _BotCommands:
         self.EvalCommand = f'eval{CMD_SUFFIX}'
         self.ExecCommand = f'exec{CMD_SUFFIX}'
         self.ClearLocalsCommand = f'clearlocals{CMD_SUFFIX}'
-        self.BotSetCommand = [f'bsetting{CMD_SUFFIX}', f'bs{CMD_SUFFIX}']
+        self.BotSetCommand = [f'kpsbsetting{CMD_SUFFIX}', f'bst{CMD_SUFFIX}']
         self.UserSetCommand = [f'usetting{CMD_SUFFIX}', f'us{CMD_SUFFIX}']
         self.BtSelectCommand = f'btsel{CMD_SUFFIX}'
         self.CategorySelect = f'ctsel{CMD_SUFFIX}'
