@@ -497,7 +497,7 @@ class MirrorLeechListener:
             _, INDEXURL = getGDriveUploadUtils(user_id_, self.u_index, self.c_index)
             if INDEX_URL:= INDEXURL:
                 url_path = rquote(f'{name}', safe='')
-                share_url = f"https://gd.ace-ml.eu.org/direct.aspx?id={file.get('id')}"
+                share_url = f'{INDEX_URL}/{url_path}'
                 if typ == "Folder":
                     share_url += '/'
                     share_url = short_url(share_url, user_id_)
