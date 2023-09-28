@@ -511,8 +511,8 @@ class GoogleDriveHelper:
 
     def __get_recursive_list(self, file, rootid):
         rtnlist = []
-        #if not rootid:
-        #    rootid = file.get('teamDriveId')
+        if not rootid:
+           rootid = file.get('teamDriveId')
         if rootid == "root":
             rootid = self.__service.files().get(fileId='root', fields='id').execute().get('id')
         x = file.get("name")
@@ -615,10 +615,10 @@ class GoogleDriveHelper:
                     else:
                         furl = f"https://drive.google.com/drive/folders/{file.get('id')}"
                     if tegr:
-                        msg += f"📁 <code>{file.get('name')}<br>(folder)</code><br>"
+                        msg += f"📁 <code>{file.get('name')}</code><br><code>(folder)</code><br>"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     else: 
-                        msg += f"📁 <code>{file.get('name')}\n(folder)</code>\n"
+                        msg += f"📁 <code>{file.get('name')}</code>\n<code>(folder)</code>\n"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     if index_url:
                         if isRecur:
