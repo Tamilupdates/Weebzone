@@ -638,10 +638,10 @@ class GoogleDriveHelper:
                     else:
                         furl = f"https://drive.google.com/uc?id={file.get('id')}&export=download"
                     if tegr:
-                        msg += f"📄 <code>{file.get('name')}</code><br><code>({get_readable_file_size(int(file.get('size', 0)))})</b><br>"
+                        msg += f"📄 <code>{file.get('name')}</code><br><code>({get_readable_file_size(int(file.get('size', 0)))})</code><br>"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     else:
-                        msg += f"📄 <code>{file.get('name')}</code>\n<code>({get_readable_file_size(int(file.get('size', 0)))})</b>\n"
+                        msg += f"📄 <code>{file.get('name')}</code>\n<code>({get_readable_file_size(int(file.get('size', 0)))})</code>\n"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     if index_url:
                         if isRecur:
