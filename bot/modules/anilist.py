@@ -288,7 +288,7 @@ def setAnimeButtons(update, context):
     data = data.split()
     siteid = data[3]
     btns = ButtonMaker()
-    btns.sbutton("⌫ Back", f"anime {data[1]} home {siteid}")
+    btns.sbutton("⏪Previous Back", f"anime {data[1]} home {siteid}")
     if user_id != int(data[1]):
         query.answer(text="Not Yours!", show_alert=True)
         return
@@ -370,7 +370,7 @@ def setCharacButtons(update, context):
     data = query.data
     data = data.split()
     btns = ButtonMaker()
-    btns.sbutton("⌫ Back", f"cha {data[1]} home {data[3]}")
+    btns.sbutton("⏪Previous Back", f"cha {data[1]} home {data[3]}")
     if user_id != int(data[1]):
         query.answer(text="Not Yours!", show_alert=True)
         return
