@@ -511,8 +511,8 @@ class GoogleDriveHelper:
 
     def __get_recursive_list(self, file, rootid):
         rtnlist = []
-        if not rootid:
-           rootid = file.get('teamDriveId')
+        #if not rootid:
+        #   rootid = file.get('teamDriveId')
         if rootid == "root":
             rootid = self.__service.files().get(fileId='root', fields='id').execute().get('id')
         x = file.get("name")
