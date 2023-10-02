@@ -649,7 +649,7 @@ class GoogleDriveHelper:
                         else:
                             url_path = rquote(f'{file.get("name")}')
                         if config_dict['SHORTENER']:
-                            url = short_url(f'{INDEX_URL}/{url_path}', self.user_id)
+                            url = short_url(f'{index_url}/{url_path}', self.user_id)
                             msg += f' <b>| <a href="{url}">Index Link</a></b>'
                         else:
                             url = f'{INDEX_URL}/{url_path}'
