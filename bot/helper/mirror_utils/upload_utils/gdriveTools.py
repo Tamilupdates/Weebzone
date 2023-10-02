@@ -512,7 +512,7 @@ class GoogleDriveHelper:
     def __get_recursive_list(self, file, rootid):
         rtnlist = []
         #if not rootid:
-        #   rootid = file.get('teamDriveId')
+        #    rootid = file.get('teamDriveId')
         if rootid == "root":
             rootid = self.__service.files().get(fileId='root', fields='id').execute().get('id')
         x = file.get("name")
@@ -615,10 +615,10 @@ class GoogleDriveHelper:
                     else:
                         furl = f"https://drive.google.com/drive/folders/{file.get('id')}"
                     if tegr:
-                        msg += f"📁 <code>{file.get('name')}</code><br><code>(folder)</code><br>"
+                        msg += f"📁 <code>{file.get('name')}<br>(folder)</code><br>"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     else: 
-                        msg += f"📁 <code>{file.get('name')}</code>\n<code>(folder)</code>\n"
+                        msg += f"📁 <code>{file.get('name')}\n(folder)</code>\n"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     if index_url:
                         if isRecur:
@@ -638,10 +638,10 @@ class GoogleDriveHelper:
                     else:
                         furl = f"https://drive.google.com/uc?id={file.get('id')}&export=download"
                     if tegr:
-                        msg += f"📄 <code>{file.get('name')}</code><br><code>({get_readable_file_size(int(file.get('size', 0)))})</code><br>"
+                        msg += f"📄 <code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size', 0)))})</code><br>"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     else:
-                        msg += f"📄 <code>{file.get('name')}</code>\n<code>({get_readable_file_size(int(file.get('size', 0)))})</code>\n"
+                        msg += f"📄 <code>{file.get('name')}\n({get_readable_file_size(int(file.get('size', 0)))})</code>\n"
                         msg += f"<b><a href='{furl}'>Drive Link</a></b>"
                     if index_url:
                         if isRecur:
@@ -697,15 +697,15 @@ class GoogleDriveHelper:
 
             msg = f"<b>Found {contents_count} result for <i>{fileName}</i></b>"
             buttons = ButtonMaker()
-            buttons.buildbutton("🔎 VIEW", f"https://graph.org/{path[0]}")
+            buttons.buildbutton("🔎 VIEW", f"https://telegra.ph/{path[0]}")
             return msg, buttons.build_menu(1)
         else:
             ulist_listener[self.user_id] = [[fileName, contents_count, itemType], telemsg]
             buttons = ButtonMaker()
             if len(telemsg) > 1:
-                buttons.sbutton('⏪Previous', f"cari {self.user_id} changepg -1")
+                buttons.sbutton('⌫', f"cari {self.user_id} changepg -1")
                 buttons.sbutton(f'Pᴀɢᴇs\n1 / {len(telemsg)}', f"cari {self.user_id} pagnav 0")
-                buttons.sbutton('Next⏩', f"cari {self.user_id} changepg 1")
+                buttons.sbutton('⌦', f"cari {self.user_id} changepg 1")
             buttons.sbutton('Close', f"cari {self.user_id} clo", 'footer')
             extra = f'''<b>Query :</b> <i>{fileName}</i>
 <b>Total Results :</b> <i>{contents_count}</i>
