@@ -400,7 +400,7 @@ class GoogleDriveHelper:
                 buttons.buildbutton("☁️ Drive Link", durl)
                 if INDEX_URL := INDEXURL:
                     url_path = rquote(f'{f_name}', safe='')
-                    url = f'{INDEX_URL}/{url_path}'
+                    url = f'{INDEX_URL}/{url_path}/'
                     url = short_url(url, self.user_id)
                     buttons.buildbutton("⚡ Index Link", url)
             else:
@@ -625,7 +625,7 @@ class GoogleDriveHelper:
                             url_path = "/".join([rquote(n, safe='') for n in self.__get_recursive_list(file, dir_id)])
                         else:
                             url_path = rquote(f'{file.get("name")}', safe='')
-                        url = f'{INDEX_URL}/{url_path}'
+                        url = f'{index_url}/{url_path}/'
                         if tegr or tgdi:
                             msg += f' <b>| <a href="{url}">Index Link</a></b>'
                 elif mime_type == 'application/vnd.google-apps.shortcut':
@@ -652,7 +652,7 @@ class GoogleDriveHelper:
                             url = short_url(f'{index_url}/{url_path}', self.user_id)
                             msg += f' <b>| <a href="{url}">Index Link</a></b>'
                         else:
-                            url = f'{INDEX_URL}/{url_path}'
+                            url = f'{index_url}/{url_path}'
                             msg += f' <b>| <a href="{url}">Index Link</a></b>'
                         if config_dict['SHORTENER']:
                             urlv = short_url(f'{index_url}/{url_path}?a=view', self.user_id)
