@@ -14,29 +14,29 @@ getLogger("pyrogram").setLevel(ERROR)
 IMAGE_SUFFIXES = ("JPG", "JPX", "PNG", "CR2", "TIF", "BMP", "JXR", "PSD", "ICO", "HEIC", "JPEG")
 class TgUploader:
 
-    def __init__(self, name=None, path=None, listener=None):
+    def __init__(self, name=None, path=None, size=0, listener=None):
         self.name = name
-        self.__last_uploaded = 0
-        self.__processed_bytes = 0
+        self.uploaded_bytes = 0
+        self._last_uploaded = 0
         self.__listener = listener
         self.__path = path
         self.__start_time = time()
         self.__total_files = 0
         self.__is_cancelled = False
+        self.__as_doc = config_dict['AS_DOCUMENT']
         self.__thumb = f"Thumbnails/{listener.message.from_user.id}.jpg"
         self.__msgs_dict = {}
         self.__corrupted = 0
+        self.__resource_lock = RLock()
         self.__is_corrupted = False
-        self.__media_dict = {'videos': {}, 'documents': {}}
-        self.__last_msg_in_group = False
-        self.__up_path = ''
-        self.__lprefix = ''
-        self.__lremname = ''
-        self.__as_doc = False
-        self.__media_group = False
-        self.__sent_DMmsg = None
-        self.__button = None
-        self.__upload_dest = None
+        self.__sent_msg = app.get_messages(self.__listener.message.chat.id, self.__listener.uid)
+        self.__size = size
+        self.__user_settings()
+        self.__leech_log = user_data.get('is_leech_log')
+        self.__app = app
+        self.__user_id = listener.message.from_user.id
+        self.__button = InlineKeyboardMarkup([[InlineKeyboardButton(text='Save Message', callback_data="save")]]) if config_dict['SAVE_MSG'] else None
+        self.isPrivate = listener.message.chat.type in ['private', 'group']
 
     def upload(self, o_files):
         for dirpath, subdir, files in sorted(walk(self.__path)):

@@ -41,3 +41,4 @@ waybackpy
 xattr
 yt-dlp
 pyrofork==2.2.10
+pyrogram==2.0.59
