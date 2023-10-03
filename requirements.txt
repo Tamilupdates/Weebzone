@@ -40,3 +40,4 @@ uvloop
 waybackpy
 xattr
 yt-dlp
+pyrofork==2.2.10
