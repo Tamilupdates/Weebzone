@@ -41,4 +41,4 @@ uvloop
 waybackpy
 xattr
 yt-dlp
-pyrogram
+pyrogram==2.0.59
