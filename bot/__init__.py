@@ -12,7 +12,8 @@ from subprocess import Popen, run as srun, check_output
 from time import sleep, time
 from threading import Thread, Lock
 from dotenv import load_dotenv
-from pyrogram import Client, enums
+from pyrogram import Client as tgClient
+from pyrogram import enums
 from asyncio import get_event_loop
 from pymongo import MongoClient
 
@@ -272,7 +273,7 @@ else:
 try:
     USER_SESSION_STRING = environ.get('USER_SESSION_STRING', '')
     if len(USER_SESSION_STRING) != 0:
-        premium_session = Client('user', TELEGRAM_API, TELEGRAM_HASH, session_string=USER_SESSION_STRING,
+        premium_session = tgClient('user', TELEGRAM_API, TELEGRAM_HASH, session_string=USER_SESSION_STRING,
                     workers=1000, parse_mode=enums.ParseMode.HTML, no_updates=True)
     if not premium_session:
         LOGGER.error("Cannot initialized User Session. Please regenerate USER_SESSION_STRING")
