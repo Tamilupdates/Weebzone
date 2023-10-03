@@ -41,3 +41,4 @@ uvloop
 waybackpy
 xattr
 yt-dlp
+pyrogram
