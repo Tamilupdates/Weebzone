@@ -20,6 +20,8 @@ main_loop = get_event_loop()
 
 faulthandler_enable()
 
+install()
+
 setdefaulttimeout(600)
 
 botStartTime = time()
