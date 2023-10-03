@@ -36,6 +36,7 @@ telegraph
 tenacity
 tgCrypto
 urllib3==1.26.15
+uvloop
 waybackpy
 xattr
 yt-dlp
