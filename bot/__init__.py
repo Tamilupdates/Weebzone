@@ -925,8 +925,6 @@ else:
 
 tgDefaults = Defaults(parse_mode='HTML', disable_web_page_preview=True, allow_sending_without_reply=True, run_async=True)
 updater = tgUpdater(token=BOT_TOKEN, defaults=tgDefaults, request_kwargs={'read_timeout': 20, 'connect_timeout': 15})
-bot = tgClient('bot', TELEGRAM_API, TELEGRAM_HASH, bot_token=BOT_TOKEN,
-               workers=1000, parse_mode=enums.ParseMode.HTML).start()
 bot = updater.bot
 dispatcher = updater.dispatcher
 job_queue = updater.job_queue
