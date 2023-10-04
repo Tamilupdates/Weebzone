@@ -18,8 +18,6 @@ from asyncio import get_event_loop
 from pymongo import MongoClient
 from uvloop import install
 
-main_loop = get_event_loop()
-
 faulthandler_enable()
 
 install()
