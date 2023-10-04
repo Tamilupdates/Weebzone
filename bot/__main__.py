@@ -499,5 +499,4 @@ def main():
     LOGGER.info("💥 𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝")
     signal(SIGINT, exit_clean_up)
 
-app.start()
 main()
