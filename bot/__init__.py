@@ -251,8 +251,8 @@ if len(DEF_IMDB_TEMP) == 0:
 <a href="{url_cast}">Read More ...</a>'''
 
 LOGGER.info("Generating SESSION_STRING")
-app = tgClient('user', TELEGRAM_API, TELEGRAM_HASH, session_string=USER_SESSION_STRING,
-                    parse_mode=enums.ParseMode.HTML, max_concurrent_transmissions=1000).start()
+app = tgClient('bot', TELEGRAM_API, TELEGRAM_HASH, bot_token=BOT_TOKEN, workers=1000,
+               parse_mode=enums.ParseMode.HTML, max_concurrent_transmissions=1000).start()
 
 MEGA_API_KEY = environ.get('MEGA_API_KEY', '')
 if len(MEGA_API_KEY) == 0:
