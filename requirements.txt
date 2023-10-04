@@ -18,7 +18,7 @@ google-auth-httplib2
 google-auth-oauthlib
 gunicorn
 lk21
-lxml>=4.9.1
+lxml
 markdown
 mediainfo
 pillow
@@ -34,10 +34,9 @@ requests
 speedtest-cli
 telegraph
 tenacity
-tgCrypto
+tgcrypto
 urllib3==1.26.15
 uvloop
 waybackpy
 xattr
 yt-dlp
-pyrogram==2.0.59
