@@ -8,7 +8,7 @@ from time import time
 from math import ceil
 from re import split as re_split, I
 from .exceptions import NotSupportedExtractionArchive
-from bot import aria2, LOGGER, DOWNLOAD_DIR, get_client, premium_session, config_dict, STORAGE_THRESHOLD, user_data
+from bot import aria2, app, LOGGER, DOWNLOAD_DIR, get_client, premium_session, config_dict, STORAGE_THRESHOLD, user_data
 
 
 ARCH_EXT = [".tar.bz2", ".tar.gz", ".bz2", ".gz", ".tar.xz", ".tar", ".tbz2", ".tgz", ".lzma2",
