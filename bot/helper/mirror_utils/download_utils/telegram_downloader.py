@@ -52,7 +52,7 @@ class TelegramDownloadHelper:
 
     def __onDownloadProgress(self, current, total):
         if self.__is_cancelled:
-            stop_transmission()
+            app.stop_transmission()
             return
         with self.__resource_lock:
             self.downloaded_bytes = current
