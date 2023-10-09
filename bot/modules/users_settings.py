@@ -451,9 +451,9 @@ Timeout: 60 sec
         buttons.ibutton("Back", f"userset {user_id} back")
         buttons.ibutton("Close", f"userset {user_id} close")
         rmsg = f'''
-<b>Send Leech Unwanted</b>
+<b>Send Leech Remname</b>
 
-Examples: <code>mltb|jmdkh|wzml</code>
+Examples: <code>mltb|wzml</code>
 This will remove if any of those words found in filename.
 
 Timeout: 60 sec

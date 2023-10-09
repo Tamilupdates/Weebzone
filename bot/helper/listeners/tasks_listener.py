@@ -403,16 +403,16 @@ class MirrorLeechListener:
         lmsg = f'<b><i>{escape(name)}</i></b>'
         lmsg += f'\n<b>cc</b>: <i>{self.tag}</i>'
         gmsg = f'Hey <b>{self.tag}</b>!\nYour job is done.'
-        msg = f'\n\n<code>Size            </code>: {get_readable_file_size(size)}'
-        msg += f"\n<code>Elapsed         </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n<code>Upload          </code>: {self.extra_details['mode']}"
-        _msg = '' if rclonePath == '' else f'\n\n<code>Path            </code>: {rclonePath}'
+        msg = f'\n\n<b>Size            </b>: {get_readable_file_size(size)}'
+        msg += f"\n<b>Elapsed         </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
+        msg += f"\n<b>Upload          </b>: {self.extra_details['mode']}"
+        _msg = '' if rclonePath == '' else f'\n\n<b>Path            </b>: {rclonePath}'
         msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'
         buttons = ButtonMaker()
         if self.isLeech:
-            msg += f'\n<code>Total Files     </code>: {folders}\n'
+            msg += f'\n<b>Total Files     </b>: {folders}\n'
             if mime_type != 0:
-                msg += f'<code>Corrupted Files</code> : {mime_type}\n'
+                msg += f'<b>Corrupted Files</b> : {mime_type}\n'
             msg_ = '\n<b><i>Files has been sent in your DM.</i></b>'
             if not self.dmMessage:
                 if not files:
@@ -467,10 +467,10 @@ class MirrorLeechListener:
                 await start_from_queued()
                 return
         else:
-            msg += f'\n<code>Type            </code>: {mime_type}'
+            msg += f'\n<b>Type            </b>: {mime_type}'
             if mime_type == "Folder":
-                msg += f'\n<code>Sub Folders     </code>: {folders}'
-                msg += f'\n<code>Files           </code>: {files}'
+                msg += f'\n<b>Sub Folders     </b>: {folders}'
+                msg += f'\n<b>Files           </b>: {files}'
             if link or rclonePath and config_dict['RCLONE_SERVE_URL']:
                 buttons = ButtonMaker()
                 if link:
@@ -553,9 +553,9 @@ class MirrorLeechListener:
                 self.sameDir['tasks'].remove(self.uid)
                 self.sameDir['total'] -= 1
         msg = f"Sorry {self.tag}!\nYour download has been stopped."
-        msg += f"\n\n<code>Reason  </code>: {escape(str(error))}"
-        msg += f"\n<code>Elapsed </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n<code>Upload  </code>: {self.extra_details['mode']}"
+        msg += f"\n\n<b>Reason  </b>: {escape(str(error))}"
+        msg += f"\n<b>Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
+        msg += f"\n<b>Upload  </b>: {self.extra_details['mode']}"
         tlmsg = await sendMessage(self.message, msg, button)
         if self.logMessage:
             await sendMessage(self.logMessage, msg, button)
@@ -598,8 +598,8 @@ class MirrorLeechListener:
             if self.uid in self.sameDir:
                 self.sameDir.remove(self.uid)
         msg = f"{self.tag} {escape(str(error))}"
-        msg += f"\n<code>Elapsed </code>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n<code>Upload  </code>: {self.extra_details['mode']}"
+        msg += f"\n<b>Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
+        msg += f"\n<b>Upload  </b>: {self.extra_details['mode']}"
         tlmsg = await sendMessage(self.message, msg)
         if self.logMessage:
             await sendMessage(self.logMessage, msg)

@@ -1184,7 +1184,7 @@ def filelions_and_streamwish(url):
             error += f"\nOriginal"
         elif version['name'] == "h":
             error += f"\nHD"
-        error +=f" <code>{url}_{version['name']}</code>"
+        error +=f" <b>{url}_{version['name']}</b>"
     raise DirectDownloadLinkException(f'ERROR: {error}')
 
 def streamvid(url: str):
@@ -1218,7 +1218,7 @@ def streamvid(url: str):
         elif (qualities_urls := html.xpath('//div[@id="dl_versions"]/a/@href')) and (qualities := html.xpath('//div[@id="dl_versions"]/a/text()[2]')):
             error = '\nProvide a quality to download the video\nAvailable Quality:'
             for quality_url, quality in zip(qualities_urls, qualities):
-                error += f"\n{quality.strip()} <code>{quality_url}</code>"
+                error += f"\n{quality.strip()} <b>{quality_url}</b>"
             raise DirectDownloadLinkException(f'ERROR: {error}')
         elif error:= html.xpath('//div[@class="not-found-text"]/text()'):
             raise DirectDownloadLinkException(f'ERROR: {error[0]}')

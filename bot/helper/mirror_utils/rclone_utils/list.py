@@ -188,7 +188,7 @@ class RcloneList:
         if items_no > LIST_LIMIT:
             msg += f' | Page: {int(page)}/{pages} | Page Step: {self.page_step}'
         msg += f'\n\nItem Type: {self.item_type}\nConfig Path: {self.config_path}'
-        msg += f'\nCurrent Path: <code>{self.remote}{self.path}</code>'
+        msg += f'\nCurrent Path: <b>{self.remote}{self.path}</b>'
         msg += f'\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         await self.__send_list_message(msg, button)
 

@@ -4,12 +4,12 @@ from subprocess import run as srun
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
-if ospath.exists('Z_Logs.txt'):
-    with open('Z_Logs.txt', 'r+') as f:
+if ospath.exists('logs.txt'):
+    with open('logs.txt', 'r+') as f:
         f.truncate(0)
 
 basicConfig(format='%(levelname)s | From %(name)s -> %(module)s line no: %(lineno)d | %(message)s',
-                    handlers=[FileHandler('Z_Logs.txt'), StreamHandler()], level=INFO)
+                    handlers=[FileHandler('logs.txt'), StreamHandler()], level=INFO)
 
 load_dotenv('config.env', override=True)
 

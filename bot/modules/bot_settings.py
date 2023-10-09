@@ -42,7 +42,7 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 120,
                   'DOWNLOAD_DIR': '/usr/src/app/downloads/',
                   'LEECH_SPLIT_SIZE': MAX_SPLIT_SIZE,
                   'RSS_DELAY': 900,
-                  'STATUS_UPDATE_INTERVAL': 15,
+                  'STATUS_UPDATE_INTERVAL': 2,
                   'SEARCH_LIMIT': 0,
                   'UPSTREAM_REPO': 'https://github.com/Tamilupdates/weebzone',
                   'UPSTREAM_BRANCH': 'z-mirror',
@@ -160,7 +160,7 @@ async def load_config():
 
     STATUS_UPDATE_INTERVAL = environ.get('STATUS_UPDATE_INTERVAL', '')
     if len(STATUS_UPDATE_INTERVAL) == 0:
-        STATUS_UPDATE_INTERVAL = 15
+        STATUS_UPDATE_INTERVAL = 2
     else:
         STATUS_UPDATE_INTERVAL = int(STATUS_UPDATE_INTERVAL)
     if len(download_dict) != 0:
