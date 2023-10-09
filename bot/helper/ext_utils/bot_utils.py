@@ -136,22 +136,22 @@ def get_readable_message():
             tag = reply_to.from_user.mention
         elapsed = time() - download.extra_details['startTime']
         if config_dict['DELETE_LINKS']:
-            msg += f"\n<b>File Name</b> » {escape(f'{download.name()}')}\n\n" if elapsed <= config_dict['AUTO_DELETE_MESSAGE_DURATION'] else ""
+            msg += f"\n<b>File Name:</b> <code>{escape(f'{download.name()}')}</code>\n\n" if elapsed <= config_dict['AUTO_DELETE_MESSAGE_DURATION'] else ""
         else:
-            msg += f"\n<b>File Name</b> » {escape(f'{download.name()}')}\n\n"
+            msg += f"\n<b>File Name:</b> <code>{escape(f'{download.name()}')}</code>\n\n"
         msg += f"⌑ <b>{download.status()}</b>"
         if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_PAUSED,
                                      MirrorStatus.STATUS_QUEUEDL, MirrorStatus.STATUS_QUEUEUP]:
-            msg += f" » {download.speed()}"
-            msg += f"\n⌑ {get_progress_bar_string(download.progress())} » {download.progress()}"
-            msg += f"\n<b>🔄 Done</b>» {download.processed_bytes()} of {download.size()}"
-            msg += f"\n<b>⏳ ETA</b>» {download.eta()}"
-            msg += f"\n<b> | Elapsed</b>» {get_readable_time(elapsed)}"
-            msg += f"\n<b>⛓️ Engine</b>» {download.engine}"
+            msg += f" {download.speed()}"
+            msg += f"\n {get_progress_bar_string(download.progress())} » {download.progress()}"
+            msg += f"\n<b>🔄 Done:</b> {download.processed_bytes()} of {download.size()}"
+            msg += f"\n<b>⏳ ETA:</b> {download.eta()}"
+            msg += f"<b> | Elapsed:</b> {get_readable_time(elapsed)}"
+            msg += f"\n<b>⛓️ Engine:</b> {download.engine}"
             if hasattr(download, 'playList'):
                 try:
                     if playlist:=download.playList():
-                        msg += f"\n<b>YtList </b>» {playlist}"
+                        msg += f"\n<b>YtList:</b> {playlist}"
                 except:
                     pass
             if hasattr(download, 'seeders_num'):
@@ -160,18 +160,18 @@ def get_readable_message():
                 except:
                     pass
         elif download.status() == MirrorStatus.STATUS_SEEDING:
-            msg += f"\n<b>📦 Size     </b>» {download.size()}"
-            msg += f"\n<b>⚡ Speed    </b>» {download.upload_speed()}"
-            msg += f"\n<b>🔺 Uploaded </b>» {download.uploaded_bytes()}"
-            msg += f"\n<b>📎 Ratio    </b>» {download.ratio()}"
-            msg += f"\n<b>⏲️ Time     </b>» {download.seeding_time()}"
+            msg += f"\n<b>📦 Size:</b> {download.size()}"
+            msg += f"\n<b>⚡ Speed:</b> {download.upload_speed()}"
+            msg += f"\n<b>🔺 Uploaded:</b> {download.uploaded_bytes()}"
+            msg += f"\n<b>📎 Ratio:</b> {download.ratio()}"
+            msg += f"\n<b>⏲️ Time:</b> {download.seeding_time()}"
         else:
-            msg += f"\n<b>📦 Size   </b>» {download.size()}"
+            msg += f"\n<b>📦 Size:</b> {download.size()}"
         if config_dict['DELETE_LINKS']:
-            msg += f"\n<b>Task   </b>» {download.extra_details['mode']}"
+            msg += f"<b> | Task:</b> {download.extra_details['mode']}"
         else:
-            msg += f"\n<b>Task   </b>» <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
-        msg += f"\n<b>👤 User   </b>» {tag}"
+            msg += f"<b> | Task:</b> <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
+        msg += f"\n<b>👤 User:</b> {tag}"
         msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}\n\n"
     if len(msg) == 0:
         return None, None
@@ -193,9 +193,9 @@ def get_readable_message():
         elif tstatus == MirrorStatus.STATUS_UPLOADING or tstatus == MirrorStatus.STATUS_SEEDING:
             up_speed += speed_in_bytes_per_second
     msg += "____________________________"
-    msg += f"\n<b>💿 FREE : </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
+    msg += f"\n<b>💿 FREE: </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
     msg += f"<b> | 🔻 DL: </b>{get_readable_file_size(dl_speed)}/s"
-    msg += f"\n<b>🟢 UP : </b>{get_readable_time(time() - botStartTime)}"
+    msg += f"\n<b>🟢 UP: </b>{get_readable_time(time() - botStartTime)}"
     msg += f"<b> | 🔺 UL: </b>{get_readable_file_size(up_speed)}/s"
     if tasks <= STATUS_LIMIT:
         buttons = ButtonMaker()
