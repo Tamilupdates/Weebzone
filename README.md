@@ -287,7 +287,7 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
 - `EQUAL_SPLITS`: Split files larger than **LEECH_SPLIT_SIZE** into equal parts size (Not working with zip cmd). Default is `False`. `Bool`
 - `MEDIA_GROUP`: View Uploaded splitted file parts in media group. Default is `False`. `Bool`.
 - `LEECH_FILENAME_PREFIX`: Add custom word to leeched file name. `Str`
-- `DUMP_CHAT_ID`: Chat ID to where leeched files would be uploaded. `Int`. **NOTE**: Only available for superGroup/channel. Add `-100` before channel/superGroup id. In short don't add bot id or your id!
+- `LEECH_LOG`: Chat ID to where leeched files would be uploaded. `Int`. **NOTE**: Only available for superGroup/channel. Add `-100` before channel/superGroup id. In short don't add bot id or your id!
 - `LEECH_REMOVE_UNWANTED`: Remove unwanted filenames separated with `|` from leeched files. Example: `mltb|jmdkh|wzml`. `Str`
 - `USER_DUMP`: Chat ID to where leeched files would be uploaded. `Int`. **NOTE**: Only available for superGroup/channel. Add bot as `admin` and Add `-100` before channel/superGroup id. In short don't add bot id or your id!
 
@@ -352,7 +352,7 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
 
 ### Extra Features
 
-- `SET_COMMANDS`: To set bot commands automatically on every startup. Default is `False`. `Bool`
+- `SET_BOT_COMMANDS`: To set bot commands automatically on every startup. Default is `False`. `Bool`
   - **Note**: You can set commands manually according to your needs few commands are available [here](#bot-commands-to-be-set-in-botfatherhttpstmebotfather)
 - `DISABLE_LEECH`: It will disable leech functionality. Default is `False`. `Bool`
 - `DM_MODE`: If then bot will send Mirrored/Leeched files in user's DM. Default is `off`. `Str`

@@ -75,12 +75,12 @@ class TgUploader:
         self.__upload_dest = user_dict.get('user_dump') or config_dict['USER_DUMP']
 
     async def __msg_to_reply(self):
-        if DUMP_CHAT_ID := config_dict['LEECH_LOG']:
+        if LEECH_LOG := config_dict['LEECH_LOG']:
             if self.__listener.logMessage:
-                self.__sent_msg = await self.__listener.logMessage.copy(DUMP_CHAT_ID)
+                self.__sent_msg = await self.__listener.logMessage.copy(LEECH_LOG)
             else:
                 msg = f'<b>File Name</b>: <code>{escape(self.name)}</code>'
-                self.__sent_msg = await bot.send_message(DUMP_CHAT_ID, msg, disable_web_page_preview=True)
+                self.__sent_msg = await bot.send_message(LEECH_LOG, msg, disable_web_page_preview=True)
             if self.__listener.dmMessage:
                 self.__sent_DMmsg = self.__listener.dmMessage
             if IS_PREMIUM_USER:

@@ -185,8 +185,8 @@ async def load_config():
     SEARCH_LIMIT = environ.get('SEARCH_LIMIT', '')
     SEARCH_LIMIT = 0 if len(SEARCH_LIMIT) == 0 else int(SEARCH_LIMIT)
 
-    DUMP_CHAT_ID = environ.get('LEECH_LOG', '')
-    DUMP_CHAT_ID = '' if len(DUMP_CHAT_ID) == 0 else int(DUMP_CHAT_ID)
+    LEECH_LOG = environ.get('LEECH_LOG', '')
+    LEECH_LOG = '' if len(LEECH_LOG) == 0 else int(LEECH_LOG)
 
     USER_DUMP = environ.get('USER_DUMP', '')
     USER_DUMP = '' if len(USER_DUMP) == 0 else USER_DUMP
@@ -359,8 +359,8 @@ async def load_config():
     DISABLE_LEECH = environ.get('DISABLE_LEECH', '')
     DISABLE_LEECH = DISABLE_LEECH.lower() == 'true'
 
-    SET_COMMANDS = environ.get('SET_BOT_COMMANDS', '')
-    SET_COMMANDS = SET_COMMANDS.lower() == 'true'
+    SET_BOT_COMMANDS = environ.get('SET_BOT_COMMANDS', '')
+    SET_BOT_COMMANDS = SET_BOT_COMMANDS.lower() == 'true'
 
     REQUEST_LIMITS = environ.get('REQUEST_LIMITS', '')
     REQUEST_LIMITS = '' if len(
@@ -464,7 +464,7 @@ async def load_config():
                         'DATABASE_URL': DATABASE_URL,
                         'DEFAULT_UPLOAD': DEFAULT_UPLOAD,
                         'DOWNLOAD_DIR': DOWNLOAD_DIR,
-                        'LEECH_LOG': DUMP_CHAT_ID,
+                        'LEECH_LOG': LEECH_LOG,
                         'DIRECT_LIMIT': DIRECT_LIMIT,
                         'DISABLE_DRIVE_LINK': DISABLE_DRIVE_LINK,
                         'DISABLE_LEECH': DISABLE_LEECH,
@@ -513,7 +513,7 @@ async def load_config():
                         'SUDO_USERS': SUDO_USERS,
                         'STORAGE_THRESHOLD': STORAGE_THRESHOLD,
                         'STOP_DUPLICATE_TASKS': STOP_DUPLICATE_TASKS,
-                        'SET_BOT_COMMANDS': SET_COMMANDS,
+                        'SET_BOT_COMMANDS': SET_BOT_COMMANDS,
                         'TELEGRAM_API': TELEGRAM_API,
                         'TELEGRAM_HASH': TELEGRAM_HASH,
                         'TORRENT_TIMEOUT': TORRENT_TIMEOUT,
