@@ -307,7 +307,7 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
 
 ### MEGA
 
-- `MEGA_EMAIL`: E-Mail used to sign-in on [mega.io](https://mega.io) for using premium account. `Str`
+- `MEGA_EMAIL_ID`: E-Mail used to sign-in on [mega.io](https://mega.io) for using premium account. `Str`
 - `MEGA_PASSWORD`: Password for [mega.io](https://mega.io) account. `Str`
 
 ### Queue System

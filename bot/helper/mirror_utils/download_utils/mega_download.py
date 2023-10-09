@@ -127,7 +127,7 @@ class AsyncExecutor:
 
 
 async def add_mega_download(mega_link, path, listener, name):
-    MEGA_EMAIL = config_dict['MEGA_EMAIL']
+    MEGA_EMAIL_ID = config_dict['MEGA_EMAIL_ID']
     MEGA_PASSWORD = config_dict['MEGA_PASSWORD']
 
     executor = AsyncExecutor()
@@ -137,8 +137,8 @@ async def add_mega_download(mega_link, path, listener, name):
     mega_listener = MegaAppListener(executor.continue_event, listener)
     api.addListener(mega_listener)
 
-    if MEGA_EMAIL and MEGA_PASSWORD:
-        await executor.do(api.login, (MEGA_EMAIL, MEGA_PASSWORD))
+    if MEGA_EMAIL_ID and MEGA_PASSWORD:
+        await executor.do(api.login, (MEGA_EMAIL_ID, MEGA_PASSWORD))
 
     if get_mega_link_type(mega_link) == "file":
         await executor.do(api.getPublicNode, (mega_link,))

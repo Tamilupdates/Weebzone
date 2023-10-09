@@ -182,11 +182,11 @@ if len(USER_SESSION_STRING) != 0:
     else:
         IS_PREMIUM_USER = user.me.is_premium
 
-MEGA_EMAIL = environ.get('MEGA_EMAIL', '')
+MEGA_EMAIL_ID = environ.get('MEGA_EMAIL_ID', '')
 MEGA_PASSWORD = environ.get('MEGA_PASSWORD', '')
-if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
+if len(MEGA_EMAIL_ID) == 0 or len(MEGA_PASSWORD) == 0:
     warning('MEGA Credentials not provided!')
-    MEGA_EMAIL = ''
+    MEGA_EMAIL_ID = ''
     MEGA_PASSWORD = ''
 
 
@@ -433,7 +433,7 @@ config_dict = {
     "LEECH_REMOVE_UNWANTED": LEECH_REMOVE_UNWANTED,
     "LEECH_SPLIT_SIZE": LEECH_SPLIT_SIZE,
     "MEDIA_GROUP": MEDIA_GROUP,
-    "MEGA_EMAIL": MEGA_EMAIL,
+    "MEGA_EMAIL_ID": MEGA_EMAIL_ID,
     "MEGA_PASSWORD": MEGA_PASSWORD,
     "OWNER_ID": OWNER_ID,
     "QUEUE_ALL": QUEUE_ALL,

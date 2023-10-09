@@ -116,10 +116,10 @@ async def load_config():
                 x = x.lstrip('.')
             GLOBAL_EXTENSION_FILTER.append(x.strip().lower())
 
-    MEGA_EMAIL = environ.get('MEGA_EMAIL', '')
+    MEGA_EMAIL_ID = environ.get('MEGA_EMAIL_ID', '')
     MEGA_PASSWORD = environ.get('MEGA_PASSWORD', '')
-    if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
-        MEGA_EMAIL = ''
+    if len(MEGA_EMAIL_ID) == 0 or len(MEGA_PASSWORD) == 0:
+        MEGA_EMAIL_ID = ''
         MEGA_PASSWORD = ''
 
     FILELION_API = environ.get('FILELION_API', '')
@@ -488,7 +488,7 @@ async def load_config():
                         'LEECH_LIMIT': LEECH_LIMIT,
                         'MEGA_LIMIT': MEGA_LIMIT,
                         'MEDIA_GROUP': MEDIA_GROUP,
-                        'MEGA_EMAIL': MEGA_EMAIL,
+                        'MEGA_EMAIL_ID': MEGA_EMAIL_ID,
                         'MEGA_PASSWORD': MEGA_PASSWORD,
                         'OWNER_ID': OWNER_ID,
                         'QUEUE_ALL': QUEUE_ALL,
