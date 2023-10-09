@@ -19,7 +19,7 @@ class _BotCommands:
         self.CloneCommand       = f'clone{CMD_SUFFIX}'
         self.CountCommand       = f'count{CMD_SUFFIX}'
         self.DeleteCommand      = f'del{CMD_SUFFIX}'
-        self.CancelMirror       = f'abort{CMD_SUFFIX}'
+        self.CancelMirror       = f'cancel{CMD_SUFFIX}'
         self.ListCommand        = [f'list{CMD_SUFFIX}',     'ls']
         self.SearchCommand      = f'search{CMD_SUFFIX}'
         self.UsersCommand       = f'usr{CMD_SUFFIX}'
