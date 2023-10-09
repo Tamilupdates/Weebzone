@@ -459,4 +459,4 @@ class TgUploader:
     async def cancel_download(self):
         self.__is_cancelled = True
         LOGGER.info(f"Cancelling Upload: {self.name}")
-        await self.__listener.onUploadError('Leech stopped by user!')
+        await self.__listener.onUploadError('Leech stopped by user!\n')
