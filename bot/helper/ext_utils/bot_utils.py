@@ -193,7 +193,7 @@ def get_readable_message():
         elif tstatus == MirrorStatus.STATUS_UPLOADING or tstatus == MirrorStatus.STATUS_SEEDING:
             up_speed += speed_in_bytes_per_second
     msg += "____________________________"
-    msg += f"\n<b>💿 FREE: </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
+    msg += f"\n\n<b>💿 FREE: </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
     msg += f"<b> | 🔻 DL: </b>{get_readable_file_size(dl_speed)}/s"
     msg += f"\n<b>🟢 UP: </b>{get_readable_time(time() - botStartTime)}"
     msg += f"<b> | 🔺 UL: </b>{get_readable_file_size(up_speed)}/s"
