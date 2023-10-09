@@ -21,7 +21,7 @@ handler_dict = {}
 example_dict = {'prefix':'1. <code>@your_channel_username or Anything</code>', 
                 'mprefix':'1. <code>@your_channel_username or Anything</code>', 
                 'suffix':'1. <code>~ WZML</code>\n2. <code>~ @channelname</code>', 
-                 'msuffix':'1. <code>~ KPS</code>\n2. <code>~ @channelname</code>', 
+                'msuffix':'1. <code>~ KPS</code>\n2. <code>~ @channelname</code>', 
                 'caption': '1.'+escape("<b>{filename}</b>\nJoin Now : @TamilUpdateOfficial")+'\nCheck all available fillings options <a href="">HERE</a> and Make Custom Caption.', 
                 'userlog':'1. <code>-100xxxxxx or Channel ID</code>', 
                 'usertd':'1. <code>UserTD_Name 1TSYgS-88SkhkSuoS-KHSi7%^&s9HKj https://1.xyz.workers.dev/0:/Leecher</code>\n<b> Do not forget to add '+config_dict['SA_MAIL']+' to your TD as Content Manager</b>',
