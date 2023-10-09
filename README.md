@@ -179,7 +179,7 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 
 
 ### Extra
-- Category wise drive uploads - [Click Here](https://github.com/Tamilupdates/Z-Mirror#multi-category-ids) for more info.
+- Category wise drive uploads - [Click Here](https://github.com/Tamilupdates/weebzone#multi-category-ids) for more info.
 
 # How to deploy?
 
@@ -190,7 +190,7 @@ This is a Telegram Bot written in Python for mirroring files on the Internet to 
 - Clone this repo:
 
 ```
-git clone https://github.com/Tamilupdates/Z-Mirror Z-Mirror/ && cd Z-Mirror
+git clone https://github.com/Tamilupdates/weebzone Z-Mirror/ && cd Z-Mirror
 ```
 
 - For Debian based distros
@@ -241,12 +241,12 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
 **2. Optional Fields**
 
 - `USER_SESSION_STRING`: To download/upload from your telegram account and to send rss. To generate session string use this command `python3 generate_string_session.py` after mounting repo folder for sure. `Str`. **NOTE**: You can't use bot with private message. Use it with superGroup.
-- `DATABASE_URL`: Your Mongo Database URL (Connection string). Follow this [Generate Database](https://github.com/Tamilupdates/Z-Mirror#generate-database) to generate database. Data will be saved in Database: auth and sudo users, users settings including thumbnails for each user, rss data and incomplete tasks. **NOTE**: You can always edit all settings that saved in database from the official site -> (Browse collections). `Str`
+- `DATABASE_URL`: Your Mongo Database URL (Connection string). Follow this [Generate Database](https://github.com/Tamilupdates/weebzone#generate-database) to generate database. Data will be saved in Database: auth and sudo users, users settings including thumbnails for each user, rss data and incomplete tasks. **NOTE**: You can always edit all settings that saved in database from the official site -> (Browse collections). `Str`
 - `DOWNLOAD_DIR`: The path to the local folder where the downloads should be downloaded to. `Str`
 - `CMD_SUFFIX`: commands index number. This number will added at the end all commands. `Str`|`Int`
 - `AUTHORIZED_CHATS`: Fill user_id and chat_id of groups/users you want to authorize. Separate them by space. `Int`
 - `SUDO_USERS`: Fill user_id of users whom you want to give sudo permission. Separate them by space. `Int`
-- `DEFAULT_UPLOAD`: Whether `rc` to upload to `RCLONE_PATH` or `gd` to upload to `GDRIVE_ID`. Default is `gd`. Read More [HERE](https://github.com/Tamilupdates/Z-Mirror#upload).`Str`
+- `DEFAULT_UPLOAD`: Whether `rc` to upload to `RCLONE_PATH` or `gd` to upload to `GDRIVE_ID`. Default is `gd`. Read More [HERE](https://github.com/Tamilupdates/weebzone#upload).`Str`
 - `STATUS_UPDATE_INTERVAL`: Time in seconds after which the progress/status message will be updated. Recommended `10` seconds at least. `Int`
 - `AUTO_DELETE_MESSAGE_DURATION`: Interval of time (in seconds), after which the bot deletes it's message and command message which is expected to be viewed instantly. **NOTE**: Set to `-1` to disable auto message deletion. `Int`
 - `STATUS_LIMIT`: Limit the no. of tasks shown in status message with buttons. Default is `8`. **NOTE**: Recommended limit is `4` tasks. `Int`
@@ -256,7 +256,7 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
 - `STREAMWISH_API`: Streamwish api key to mirror Streamwish links. Get it from [Streamwish](https://streamwish.com/?op=my_account). `str`
 - `YT_DLP_OPTIONS`: Default yt-dlp options. Check all possible options [HERE](https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184) or use this [script](https://graph.org/Script-to-convert-cli-arguments-to-api-options-05-28) to convert cli arguments to api options. Format: key:value|key:value|key:value. Add `^` before integer or float, some numbers must be numeric and some string. `str`
   - Example: "format:bv*+mergeall[vcodec=none]|nocheckcertificate:True"
-- `USE_SERVICE_ACCOUNTS`: Whether to use Service Accounts or not, with google-api-python-client. For this to work see [Using Service Accounts](https://github.com/Tamilupdates/Z-Mirror#generate-service-accounts-what-is-service-account) section below. Default is `False`. `Bool`
+- `USE_SERVICE_ACCOUNTS`: Whether to use Service Accounts or not, with google-api-python-client. For this to work see [Using Service Accounts](https://github.com/Tamilupdates/weebzone#generate-service-accounts-what-is-service-account) section below. Default is `False`. `Bool`
 
 ### GDrive Tools
 
@@ -277,7 +277,7 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
 ### Update
 
 - `UPSTREAM_REPO`: Your github repository link, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. Get token from [Github settings](https://github.com/settings/tokens). So you can update your bot from filled repository on each restart. `Str`.
-  - **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect. DON'T delete .gitignore file. For more information read [THIS](https://github.com/Tamilupdates/Z-Mirror#upstream-repo-recommended).
+  - **NOTE**: Any change in docker or requirements you need to deploy/build again with updated repo to take effect. DON'T delete .gitignore file. For more information read [THIS](https://github.com/Tamilupdates/weebzone#upstream-repo-recommended).
 - `UPSTREAM_BRANCH`: Upstream branch for update. Default is `master`. `Str`
 
 ### Leech
@@ -348,7 +348,7 @@ Fill up rest of the fields. Meaning of each field is discussed below. **NOTE**: 
   - **Note**: All bot must have added same database link.
 - `DISABLE_DRIVE_LINK`: To disable google drive link button in case you need it. `Bool`
 - `TOKEN_TIMEOUT`: Token timeout for each group member in sec. `Int`
-  - **Note**: This token system is linked with url shortners, users will have to go through ads to use bot commands (if `shorteners.txt` added, Read more about shortners.txt [Here](https://github.com/Tamilupdates/Z-Mirror#multi-shortener) ).
+  - **Note**: This token system is linked with url shortners, users will have to go through ads to use bot commands (if `shorteners.txt` added, Read more about shortners.txt [Here](https://github.com/Tamilupdates/weebzone#multi-shortener) ).
 
 ### Extra Features
 
