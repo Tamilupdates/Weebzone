@@ -31,7 +31,7 @@ async def mirror_status(_, message):
         free = get_readable_file_size(
             disk_usage(config_dict['DOWNLOAD_DIR']).free)
         msg = 'No Active Tasks!\n___________________________'
-        msg += f"\n<b>🖥 CPU</b>: {cpu_percent()}% | <b>💿 FREE</b>: {free}" \
+        msg += f"\n\n<b>🖥 CPU</b>: {cpu_percent()}% | <b>💿 FREE</b>: {free}" \
                f"\n<b>🎮 RAM</b>: {virtual_memory().percent}% | <b>🟢 UPTIME</b>: {currentTime}"
         reply_message = await sendMessage(message, msg)
         await auto_delete_message(message, reply_message)
