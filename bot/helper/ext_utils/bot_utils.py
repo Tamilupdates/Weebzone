@@ -166,10 +166,10 @@ def get_readable_message():
         else:
             msg += f"\n<b>📦 Size:</b> {download.size()}"
         if config_dict['DELETE_LINKS']:
-            msg += f"<b> | Task:</b> {download.extra_details['mode']}"
+            msg += f"<b> | Mode:</b> {download.extra_details['mode']}"
         else:
             msg += f"\n<b>👤 User:</b> {tag}"
-        msg += f"<b> | Task:</b> <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
+        msg += f"<b> | Mode:</b> <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
         msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}\n\n"
     if len(msg) == 0:
         return None, None
