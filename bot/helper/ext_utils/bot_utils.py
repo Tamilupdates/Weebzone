@@ -136,7 +136,7 @@ def get_readable_message():
             tag = reply_to.from_user.mention
         elapsed = time() - download.extra_details['startTime']
         if config_dict['DELETE_LINKS']:
-            msg += f"\n<b>File Name:</b> <code>{escape(f'{download.name()}')}</code>\n\n" if elapsed <= config_dict['AUTO_DELETE_MESSAGE_DURATION'] else ""
+            msg += f"\n<code>{escape(f'{download.name()}')}</code>\n" if elapsed <= config_dict['AUTO_DELETE_MESSAGE_DURATION'] else ""
         else:
             msg += f"\n<b>File Name:</b>"
         msg += f"<b>{download.status()}:</b> <code>{escape(f'{download.name()}')}</code>\n"
