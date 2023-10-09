@@ -141,7 +141,7 @@ def get_readable_message():
         if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_PAUSED,
                                      MirrorStatus.STATUS_QUEUEDL, MirrorStatus.STATUS_QUEUEUP]:
             msg += f"\n {get_progress_bar_string(download.progress())} {download.progress()}"
-            msg += f"\n<b>⚡ Speed: {download.speed()}</b>"
+            msg += f"\n<b>⚡ Speed:</b> {download.speed()}"
             msg += f"\n<b>🔄 Done:</b> {download.processed_bytes()} of {download.size()}"
             msg += f"\n<b>⏳ ETA:</b> {download.eta()}"
             msg += f"<b> | Elapsed:</b> {get_readable_time(elapsed)}"
@@ -168,8 +168,8 @@ def get_readable_message():
         if config_dict['DELETE_LINKS']:
             msg += f"<b> | Task:</b> {download.extra_details['mode']}"
         else:
-            msg += f"<b> | Task:</b> <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
-        msg += f"\n<b>👤 User:</b> {tag}"
+            msg += f"\n<b>👤 User:</b> {tag}"
+        msg += f"<b> | Task:</b> <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
         msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}\n\n"
     if len(msg) == 0:
         return None, None
