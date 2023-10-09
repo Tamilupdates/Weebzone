@@ -6,11 +6,11 @@ class _BotCommands:
     def __init__(self):
         self.StartCommand       = 'start'
         self.MirrorCommand      = [f'mirror{CMD_SUFFIX}',    f'm{CMD_SUFFIX}']
-        self.QbMirrorCommand    = [f'qbmirror{CMD_SUFFIX}',  f'qbm{CMD_SUFFIX}']
-        self.YtdlCommand        = [f'ytdl{CMD_SUFFIX}',      f'yt{CMD_SUFFIX}']
+        self.QbMirrorCommand    = [f'qbmirror{CMD_SUFFIX}',  f'qm{CMD_SUFFIX}']
+        self.YtdlCommand        = [f'watch{CMD_SUFFIX}',      f'w{CMD_SUFFIX}']
         self.LeechCommand       = [f'leech{CMD_SUFFIX}',     f'l{CMD_SUFFIX}']
-        self.QbLeechCommand     = [f'qbleech{CMD_SUFFIX}',   f'qbl{CMD_SUFFIX}']
-        self.YtdlLeechCommand   = [f'ytdlleech{CMD_SUFFIX}', f'ytl{CMD_SUFFIX}']
+        self.QbLeechCommand     = [f'qbleech{CMD_SUFFIX}',   f'ql{CMD_SUFFIX}']
+        self.YtdlLeechCommand   = [f'leechwatch{CMD_SUFFIX}', f'lw{CMD_SUFFIX}']
         self.CancelAllCommand   = [f'cancelall{CMD_SUFFIX}', 'ca']
         self.RestartCommand     = [f'restart{CMD_SUFFIX}',   'rst']
         self.StatusCommand      = [f'status{CMD_SUFFIX}',    'sts']

@@ -317,7 +317,7 @@ help_string = f'''
 
 <b>Bot Settings:</b>
 /{BotCommands.UserSetCommand}: Open User settings.
-/{BotCommands.UsersCommand}: show users settings (Only Owner & Sudo).
+/users: show users settings (Only Owner & Sudo).
 /bsetting: Open Bot settings (Only Owner & Sudo).
 
 <b>Authentication:</b>
