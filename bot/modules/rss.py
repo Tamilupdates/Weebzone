@@ -621,7 +621,7 @@ async def rssMonitor():
                         if not feed_msg.startswith('/'):
                             feed_msg = f"/{feed_msg}"
                     else:
-                        feed_msg = f"<b>File Name : </b><code>{item_title.replace('>', '').replace('<', '')}</code>\n\n"
+                        feed_msg = f"<b>🗂️ Name : </b><code>{item_title.replace('>', '').replace('<', '')}</code>\n\n"
                         feed_msg += f"<b>Link: </b><code>{url}</code>"
                     await sendRss(feed_msg)
                     feed_count += 1

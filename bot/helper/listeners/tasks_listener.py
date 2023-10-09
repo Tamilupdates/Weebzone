@@ -400,11 +400,11 @@ class MirrorLeechListener:
         if self.isSuperGroup and config_dict['INCOMPLETE_TASK_NOTIFIER'] and DATABASE_URL:
             await DbManager().rm_complete_task(self.message.link)
         LOGGER.info(f'Done Uploading {name}')
-        lmsg = f'<b>File Name </b>: <code>{escape(name)}</code>'
+        lmsg = f'<b>🗂️ Name </b>: <code>{escape(name)}</code>'
         gmsg = f'Hey <b>{self.tag}</b>!\nYour job is done.'
-        msg = f'\n<b>Size </b>: {get_readable_file_size(size)}'
-        msg += f"\n<b>Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f"\n<b>Upload </b>: {self.extra_details['mode']}"
+        msg = f'\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+        msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
+        msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<b>Path </b>: {rclonePath}'
         msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'
         buttons = ButtonMaker()
