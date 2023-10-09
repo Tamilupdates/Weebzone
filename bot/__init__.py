@@ -379,7 +379,7 @@ DISABLE_DRIVE_LINK = DISABLE_DRIVE_LINK.lower() == 'true'
 DISABLE_LEECH = environ.get('DISABLE_LEECH', '')
 DISABLE_LEECH = DISABLE_LEECH.lower() == 'true'
 
-SET_COMMANDS = environ.get('SET_COMMANDS', '')
+SET_COMMANDS = environ.get('SET_BOT_COMMANDS', '')
 SET_COMMANDS = SET_COMMANDS.lower() == 'true'
 
 REQUEST_LIMITS = environ.get('REQUEST_LIMITS', '')

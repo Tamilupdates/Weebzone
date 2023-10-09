@@ -359,7 +359,7 @@ async def load_config():
     DISABLE_LEECH = environ.get('DISABLE_LEECH', '')
     DISABLE_LEECH = DISABLE_LEECH.lower() == 'true'
 
-    SET_COMMANDS = environ.get('SET_COMMANDS', '')
+    SET_COMMANDS = environ.get('SET_BOT_COMMANDS', '')
     SET_COMMANDS = SET_COMMANDS.lower() == 'true'
 
     REQUEST_LIMITS = environ.get('REQUEST_LIMITS', '')
@@ -513,7 +513,7 @@ async def load_config():
                         'SUDO_USERS': SUDO_USERS,
                         'STORAGE_THRESHOLD': STORAGE_THRESHOLD,
                         'STOP_DUPLICATE_TASKS': STOP_DUPLICATE_TASKS,
-                        'SET_COMMANDS': SET_COMMANDS,
+                        'SET_BOT_COMMANDS': SET_COMMANDS,
                         'TELEGRAM_API': TELEGRAM_API,
                         'TELEGRAM_HASH': TELEGRAM_HASH,
                         'TORRENT_TIMEOUT': TORRENT_TIMEOUT,
@@ -709,7 +709,7 @@ async def edit_variable(_, message, pre_message, key):
         await start_from_queued()
     elif key in ['RCLONE_SERVE_URL', 'RCLONE_SERVE_PORT', 'RCLONE_SERVE_USER', 'RCLONE_SERVE_PASS']:
         await rclone_serve_booter()
-    elif key == 'SET_COMMANDS':
+    elif key == 'SET_BOT_COMMANDS':
         await set_commands(client)
 
 

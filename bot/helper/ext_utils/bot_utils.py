@@ -443,7 +443,7 @@ def new_thread(func):
 
 
 async def set_commands(client):
-    if config_dict['SET_COMMANDS']:
+    if config_dict['SET_BOT_COMMANDS']:
         await client.set_bot_commands([
             BotCommand(f'{BotCommands.MirrorCommand[0]}', f'or /{BotCommands.MirrorCommand[1]} Mirror'),
             BotCommand(f'{BotCommands.LeechCommand[0]}', f'or /{BotCommands.LeechCommand[1]} Leech'),
