@@ -140,8 +140,8 @@ def get_readable_message():
         msg += f"<b>{download.status()}:</b> <code>{escape(f'{download.name()}')}</code>"
         if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_PAUSED,
                                      MirrorStatus.STATUS_QUEUEDL, MirrorStatus.STATUS_QUEUEUP]:
+            msg += f"\n {get_progress_bar_string(download.progress())} {download.progress()}"
             msg += f"\n<b>⚡ Speed: {download.speed()}</b>"
-            msg += f"\n {get_progress_bar_string(download.progress())} » {download.progress()}"
             msg += f"\n<b>🔄 Done:</b> {download.processed_bytes()} of {download.size()}"
             msg += f"\n<b>⏳ ETA:</b> {download.eta()}"
             msg += f"<b> | Elapsed:</b> {get_readable_time(elapsed)}"
