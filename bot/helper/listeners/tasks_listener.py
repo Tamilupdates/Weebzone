@@ -438,7 +438,7 @@ class MirrorLeechListener:
                     await sendMessage(self.message, gmsg + msg + msg_)
                     if self.logMessage:
                         await sendMessage(self.logMessage, lmsg + msg)
-                elif self.dmMessage and not config_dict['DUMP_CHAT_ID']:
+                elif self.dmMessage and not config_dict['LEECH_LOG']:
                     await sendMessage(self.dmMessage, lmsg + msg)
                     await sendMessage(self.message, gmsg + msg + msg_)
                     if self.logMessage:

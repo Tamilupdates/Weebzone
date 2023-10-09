@@ -185,7 +185,7 @@ async def load_config():
     SEARCH_LIMIT = environ.get('SEARCH_LIMIT', '')
     SEARCH_LIMIT = 0 if len(SEARCH_LIMIT) == 0 else int(SEARCH_LIMIT)
 
-    DUMP_CHAT_ID = environ.get('DUMP_CHAT_ID', '')
+    DUMP_CHAT_ID = environ.get('LEECH_LOG', '')
     DUMP_CHAT_ID = '' if len(DUMP_CHAT_ID) == 0 else int(DUMP_CHAT_ID)
 
     USER_DUMP = environ.get('USER_DUMP', '')
@@ -464,7 +464,7 @@ async def load_config():
                         'DATABASE_URL': DATABASE_URL,
                         'DEFAULT_UPLOAD': DEFAULT_UPLOAD,
                         'DOWNLOAD_DIR': DOWNLOAD_DIR,
-                        'DUMP_CHAT_ID': DUMP_CHAT_ID,
+                        'LEECH_LOG': DUMP_CHAT_ID,
                         'DIRECT_LIMIT': DIRECT_LIMIT,
                         'DISABLE_DRIVE_LINK': DISABLE_DRIVE_LINK,
                         'DISABLE_LEECH': DISABLE_LEECH,
@@ -636,7 +636,7 @@ async def edit_variable(_, message, pre_message, key):
     elif key == 'DOWNLOAD_DIR':
         if not value.endswith('/'):
             value += '/'
-    elif key in ['DUMP_CHAT_ID', 'RSS_CHAT_ID', 'LOG_CHAT_ID', 'USER_DUMP']:
+    elif key in ['LEECH_LOG', 'RSS_CHAT_ID', 'LOG_CHAT_ID', 'USER_DUMP']:
         if value.isdigit() or value.startswith('-'):
             value = int(value)
     elif key == 'STATUS_UPDATE_INTERVAL':
