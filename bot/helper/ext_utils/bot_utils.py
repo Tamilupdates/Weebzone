@@ -29,17 +29,17 @@ PAGES           = 1
 PAGE_NO         = 1
 
 class MirrorStatus:
-    STATUS_UPLOADING    = "Uploading"
-    STATUS_DOWNLOADING  = "Downloading"
-    STATUS_CLONING      = "Cloning"
-    STATUS_QUEUEDL      = "Queued Download"
-    STATUS_QUEUEUP      = "Queued Upload"
-    STATUS_PAUSED       = "Paused"
-    STATUS_ARCHIVING    = "Archiving"
-    STATUS_EXTRACTING   = "Extracting"
-    STATUS_SPLITTING    = "Spliting"
-    STATUS_CHECKING     = "CheckingUp"
-    STATUS_SEEDING      = "Seeding"
+    STATUS_UPLOADING    = "📤 Upload"
+    STATUS_DOWNLOADING  = "📥 Download"
+    STATUS_CLONING      = "♻️ Clone"
+    STATUS_QUEUEDL      = "💤 Queued Download"
+    STATUS_QUEUEUP      = "💤 Queued Upload"
+    STATUS_PAUSED       = "⛔️ Paused"
+    STATUS_ARCHIVING    = "🔐 Archive"
+    STATUS_EXTRACTING   = "📂 Extract"
+    STATUS_SPLITTING    = "✂️ Split"
+    STATUS_CHECKING     = "📝 CheckUp"
+    STATUS_SEEDING      = "🌧  Seed"
 
 class setInterval:
     def __init__(self, interval, action):
@@ -144,14 +144,14 @@ def get_readable_message():
                                      MirrorStatus.STATUS_QUEUEDL, MirrorStatus.STATUS_QUEUEUP]:
             msg += f" » {download.speed()}"
             msg += f"\n⌑ {get_progress_bar_string(download.progress())} » {download.progress()}"
-            msg += f"\n⌑ <b>Done   </b>» {download.processed_bytes()} of {download.size()}"
-            msg += f"\n⌑ <b>ETA    </b>» {download.eta()}"
-            msg += f"\n⌑ <b>Past   </b>» {get_readable_time(elapsed)}"
-            msg += f"\n⌑ <b>ENG    </b>» {download.engine}"
+            msg += f"\n<b>🔄 Done</b>» {download.processed_bytes()} of {download.size()}"
+            msg += f"\n<b>⏳ ETA</b>» {download.eta()}"
+            msg += f"\n<b> | Elapsed</b>» {get_readable_time(elapsed)}"
+            msg += f"\n<b>⛓️ Engine</b>» {download.engine}"
             if hasattr(download, 'playList'):
                 try:
                     if playlist:=download.playList():
-                        msg += f"\n⌑ <b>YtList </b>» {playlist}"
+                        msg += f"\n<b>YtList </b>» {playlist}"
                 except:
                     pass
             if hasattr(download, 'seeders_num'):
@@ -160,19 +160,19 @@ def get_readable_message():
                 except:
                     pass
         elif download.status() == MirrorStatus.STATUS_SEEDING:
-            msg += f"\n⌑ <b>Size     </b>» {download.size()}"
-            msg += f"\n⌑ <b>Speed    </b>» {download.upload_speed()}"
-            msg += f"\n⌑ <b>Uploaded </b>» {download.uploaded_bytes()}"
-            msg += f"\n⌑ <b>Ratio    </b>» {download.ratio()}"
-            msg += f"\n⌑ <b>Time     </b>» {download.seeding_time()}"
+            msg += f"\n<b>📦 Size     </b>» {download.size()}"
+            msg += f"\n<b>⚡ Speed    </b>» {download.upload_speed()}"
+            msg += f"\n<b>🔺 Uploaded </b>» {download.uploaded_bytes()}"
+            msg += f"\n<b>📎 Ratio    </b>» {download.ratio()}"
+            msg += f"\n<b>⏲️ Time     </b>» {download.seeding_time()}"
         else:
-            msg += f"\n⌑ <b>Size   </b>» {download.size()}"
+            msg += f"\n<b>📦 Size   </b>» {download.size()}"
         if config_dict['DELETE_LINKS']:
-            msg += f"\n⌑ <b>Task   </b>» {download.extra_details['mode']}"
+            msg += f"\n<b>Task   </b>» {download.extra_details['mode']}"
         else:
-            msg += f"\n⌑ <b>Task   </b>» <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
-        msg += f"\n⌑ <b>User   </b>» {tag}"
-        msg += f"\n⚠️ /{BotCommands.CancelMirror}_{download.gid()}\n\n"
+            msg += f"\n<b>Task   </b>» <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
+        msg += f"\n<b>👤 User   </b>» {tag}"
+        msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}\n\n"
     if len(msg) == 0:
         return None, None
     def convert_speed_to_bytes_per_second(spd):
@@ -193,10 +193,10 @@ def get_readable_message():
         elif tstatus == MirrorStatus.STATUS_UPLOADING or tstatus == MirrorStatus.STATUS_SEEDING:
             up_speed += speed_in_bytes_per_second
     msg += "____________________________"
-    msg += f"\n<b>FREE: </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
-    msg += f"<b> | DL: </b>{get_readable_file_size(dl_speed)}/s"
-    msg += f"\n<b>UPTM: </b>{get_readable_time(time() - botStartTime)}"
-    msg += f"<b> | UL: </b>{get_readable_file_size(up_speed)}/s"
+    msg += f"\n<b>💿 FREE : </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
+    msg += f"<b> | 🔻 DL: </b>{get_readable_file_size(dl_speed)}/s"
+    msg += f"\n<b>🟢 UP : </b>{get_readable_time(time() - botStartTime)}"
+    msg += f"<b> | 🔺 UL: </b>{get_readable_file_size(up_speed)}/s"
     if tasks <= STATUS_LIMIT:
         buttons = ButtonMaker()
         buttons.ibutton("BOT INFO", "status stats")
@@ -208,9 +208,9 @@ def get_readable_message():
 
 def get_pages(msg):
     buttons = ButtonMaker()
-    buttons.ibutton("⫷", "status pre")
+    buttons.ibutton("⏪Previous", "status pre")
     buttons.ibutton(f"{PAGE_NO}/{PAGES}", "status stats")
-    buttons.ibutton("⫸", "status nex")
+    buttons.ibutton("Next⏩", "status nex")
     button = buttons.build_menu(3)
     return msg, button
 
