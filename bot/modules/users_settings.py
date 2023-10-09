@@ -88,7 +88,7 @@ async def get_user_settings(from_user):
     else:
         user_dump = 'None'
 
-    buttons.ibutton("Leech Remove Unwanted", f"userset {user_id} lremname")
+    buttons.ibutton("Leech Remname", f"userset {user_id} lremname")
     if user_dict.get('lremname', False):
         lremname = user_dict['lremname']
     elif 'lremname' not in user_dict and (LRU := config_dict['LEECH_REMOVE_UNWANTED']):
