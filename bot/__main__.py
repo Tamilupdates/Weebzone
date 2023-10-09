@@ -307,31 +307,30 @@ help_string = f'''
 
 <b>Cancel Tasks:</b>
 /{BotCommands.CancelMirror}: Cancel task by gid or reply.
-/{BotCommands.CancelAllCommand[0]} : Cancel all tasks which added by you /{BotCommands.CancelAllCommand[1]} to in bots.
+/{BotCommands.CancelAllCommand[0]} : Cancel all tasks which added by you to in bots.
 
 <b>Torrent/Drive Search:</b>
-/{BotCommands.ListCommand} [query]: Search in Google Drive(s).
+/{BotCommands.ListCommand[0]} [query]: Search in Google Drive(s).
 /{BotCommands.SearchCommand} [query]: Search for torrents with API.
 
 <b>Bot Settings:</b>
 /{BotCommands.UserSetCommand}: Open User settings.
 /{BotCommands.UsersCommand}: show users settings (Only Owner & Sudo).
-/{BotCommands.BotSetCommand}: Open Bot settings (Only Owner & Sudo).
+/bsetting: Open Bot settings (Only Owner & Sudo).
 
 <b>Authentication:</b>
-/{BotCommands.AuthorizeCommand}: Authorize a chat or a user to use the bot (Only Owner & Sudo).
-/{BotCommands.UnAuthorizeCommand}: Unauthorize a chat or a user to use the bot (Only Owner & Sudo).
-/{BotCommands.AddSudoCommand}: Add sudo user (Only Owner).
-/{BotCommands.RmSudoCommand}: Remove sudo users (Only Owner).
+/authorize: Authorize a chat or a user to use the bot (Only Owner & Sudo).
+/unauthorize: Unauthorize a chat or a user to use the bot (Only Owner & Sudo).
+/addsudo: Add sudo user (Only Owner).
+/rmsudo: Remove sudo users (Only Owner).
 
 <b>Bot Stats:</b>
-/{BotCommands.StatusCommand[0]} or /{BotCommands.StatusCommand[1]}: Shows a status of all active tasks.
-/{BotCommands.StatsCommand[0]} or /{BotCommands.StatsCommand[1]}: Show server stats.
-/{BotCommands.PingCommand[0]} or /{BotCommands.PingCommand[1]}: Check how long it takes to Ping the Bot.
+/{BotCommands.StatusCommand[0]}: Shows a status of all active tasks.
+/{BotCommands.StatsCommand[0]}: Show server stats.
+/{BotCommands.PingCommand[0]}: Check how long it takes to Ping the Bot.
 
 <b>Maintainance:</b>
 /{BotCommands.RestartCommand[0]}: Restart and update the bot (Only Owner & Sudo).
-/{BotCommands.RestartCommand[1]}: Restart and update all bots (Only Owner & Sudo).
 /{BotCommands.LogCommand}: Get a log file of the bot. Handy for getting crash reports (Only Owner & Sudo).
 
 <b>Extras:</b>
