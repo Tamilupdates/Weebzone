@@ -113,7 +113,7 @@ async def __onDownloadComplete(api, gid):
                 if not dl.queued:
                     await sync_to_async(api.client.force_pause, new_gid)
                 SBUTTONS = bt_selection_buttons(new_gid)
-                msg = f"<b>🗂️ Name</b>: <i>{dl.name()}</i>\n\n \
+                msg = f"<b>🗂️ Name</b>: {dl.name()}\n\n \
 Your download paused. Choose files then press Done Selecting button to start downloading."
                 await sendMessage(listener.message, msg, SBUTTONS)
     elif download.is_torrent:

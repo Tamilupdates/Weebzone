@@ -401,7 +401,7 @@ class MirrorLeechListener:
             await DbManager().rm_complete_task(self.message.link)
         LOGGER.info(f'Done Uploading {name}')
         gmsg = f'<b>✅ Your job is done.</b>'
-        msg = f'\n\n<b>🗂️ Name </b>: <i>{escape(name)}</i>'
+        msg = f'\n\n<b>🗂️ Name </b>: {escape(name)}'
         msg += f'\n<b>📦 Size </b>: {get_readable_file_size(size)}'
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
