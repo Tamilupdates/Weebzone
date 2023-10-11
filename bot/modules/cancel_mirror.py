@@ -90,10 +90,10 @@ def cancel_all_update(update, context):
 
 
 
-cancel_mirror_handler = dispatcher.add_handler(CallbackQueryHandler(cancel_mirror,
-                                   filters=(regex(f"^/{BotCommands.CancelMirror}(_\w+)?(?!all)") & CustomFilters.authorized_chat | CustomFilters.authorized_user)))
+bot.add_handler(MessageHandler(cancel_mirror, filters=regex(
+    f"^/{BotCommands.CancelMirror}(_\w+)?(?!all)") & CustomFilters.authorized & ~CustomFilters.blacklisted))
+bot.add_handler(MessageHandler(cancell_all_buttons, filters=command(
+    BotCommands.CancelAllCommand) & CustomFilters.sudo))
+bot.add_handler(CallbackQueryHandler(cancel_all_update, filters=regex(r"^canall")))
 
-cancel_all_handler = dispatcher.add_handler(CallbackQueryHandler(cancell_all_buttons, filters=command(BotCommands.CancelAllCommand & CustomFilters.owner_filter | CustomFilters.sudo_user)))
-
-cancel_all_buttons_handler = dispatcher.add_handler(CallbackQueryHandler(cancel_all_update, filters=regex("^canall")))
 
