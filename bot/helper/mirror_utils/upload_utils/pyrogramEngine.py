@@ -46,7 +46,7 @@ class TgUploader:
         self.__lremname = ''
         self.__as_doc = False
         self.__media_group = False
-        self.__sent_DMmsg = None
+        self.__sent_DMmsg = True
         self.__button = None
         self.__upload_dest = None
 
@@ -78,6 +78,9 @@ class TgUploader:
         if LEECH_LOG := config_dict['LEECH_LOG']:
             if self.__listener.logMessage:
                 self.__sent_msg = await self.__listener.logMessage.copy(LEECH_LOG)
+            else:
+                msg = f'<b>🗂️ Name</b>: <code>{escape(self.name)}</code>'
+                self.__sent_msg = await bot.send_message(LEECH_LOG, msg, disable_web_page_preview=True)
             if self.__listener.dmMessage:
                 self.__sent_DMmsg = self.__listener.dmMessage
             if IS_PREMIUM_USER:
