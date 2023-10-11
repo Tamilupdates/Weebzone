@@ -46,7 +46,7 @@ class TgUploader:
         self.__lremname = ''
         self.__as_doc = False
         self.__media_group = False
-        self.__sent_DMmsg = True
+        self.__sent_DMmsg = None
         self.__button = None
         self.__upload_dest = None
 
