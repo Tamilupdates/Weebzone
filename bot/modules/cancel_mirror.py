@@ -1,4 +1,4 @@
-from telegram.ext import CommandHandler, CallbackQueryHandler
+from telegram.ext import MessageHandler, CallbackQueryHandler
 from time import sleep
 from threading import Thread
 from pyrogram.filters import command, regex
@@ -90,10 +90,10 @@ def cancel_all_update(update, context):
 
 
 
-cancel_mirror_handler = dispatcher.add_handler(CommandHandler(cancel_mirror,
+cancel_mirror_handler = dispatcher.add_handler(CallbackQueryHandler(cancel_mirror,
                                    filters=(regex(f"^/{BotCommands.CancelMirror}(_\w+)?(?!all)") & CustomFilters.authorized_chat | CustomFilters.authorized_user)))
 
-cancel_all_handler = dispatcher.add_handler(CommandHandler(cancell_all_buttons, filters=command(BotCommands.CancelAllCommand & CustomFilters.owner_filter | CustomFilters.sudo_user)))
+cancel_all_handler = dispatcher.add_handler(CallbackQueryHandler(cancell_all_buttons, filters=command(BotCommands.CancelAllCommand & CustomFilters.owner_filter | CustomFilters.sudo_user)))
 
 cancel_all_buttons_handler = dispatcher.add_handler(CallbackQueryHandler(cancel_all_update, filters=regex("^canall")))
 
