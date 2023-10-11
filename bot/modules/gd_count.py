@@ -38,7 +38,7 @@ async def countNode(_, message):
             await sendMessage(message, name)
             return
         await deleteMessage(msg)
-        msg = f'<b>🗂️ Name</b>: <code>{name}</code>'
+        msg = f'<b>🗂️ Name</b>: <i>{name}</i>'
         msg += f'\n\n<b>📦 Size</b>: {get_readable_file_size(size)}'
         msg += f'\n<b>♻ Type</b>: {mime_type}'
         if mime_type == 'Folder':
