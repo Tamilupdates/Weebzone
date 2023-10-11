@@ -78,10 +78,10 @@ async def get_user_settings(from_user):
     else:
         ytopt = 'None'
 
-    buttons.ibutton("Leech Splits", f"userset {user_id} lss")
-    split_size = user_dict.get(
-        'split_size', False) or config_dict['LEECH_SPLIT_SIZE']
-    split_size = get_readable_file_size(split_size)
+#    buttons.ibutton("Leech Splits", f"userset {user_id} lss")
+#    split_size = user_dict.get(
+#        'split_size', False) or config_dict['LEECH_SPLIT_SIZE']
+#    split_size = get_readable_file_size(split_size)
 
 #    if user_dict.get('equal_splits', False) or 'equal_splits' not in user_dict and config_dict['EQUAL_SPLITS']:
 #        equal_splits = 'Enabled'
