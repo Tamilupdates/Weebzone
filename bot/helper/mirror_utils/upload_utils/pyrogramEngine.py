@@ -16,7 +16,8 @@ from tenacity import (RetryError, retry, retry_if_exception_type,
                       stop_after_attempt, wait_exponential)
 
 from bot import GLOBAL_EXTENSION_FILTER, IS_PREMIUM_USER, bot, config_dict, user, user_data
-from bot.helper.ext_utils.bot_utils import get_readable_file_size, sync_to_async
+from bot.helper.ext_utils.bot_utils import (extra_btns, get_readable_file_size,
+                                            get_readable_time, sync_to_async)
 from bot.helper.ext_utils.fs_utils import clean_unwanted, get_base_name, is_archive
 from bot.helper.ext_utils.leech_utils import get_document_type, get_media_info, take_ss, remove_unwanted, get_audio_thumb
 
