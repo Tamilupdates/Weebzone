@@ -80,7 +80,7 @@ class TgUploader:
                 self.__sent_msg = await self.__listener.logMessage.copy(LEECH_LOG)
             else:
                 msg = f'<b>⭐ #Leech_Started</b>'
-                msg += f'\n\n<b>🗂️ Name</b>: {escape(self.name)}'
+                msg += f'\n\n<b>🗂️ Name</b>: <code>{escape(self.name)}</code>'
                 self.__sent_msg = await bot.send_message(LEECH_LOG, msg, disable_web_page_preview=True)
             if self.__listener.dmMessage:
                 self.__sent_DMmsg = self.__listener.dmMessage
@@ -273,8 +273,8 @@ class TgUploader:
             await self.__listener.onUploadError('Files Corrupted or unable to upload.')
             return
         if config_dict['LEECH_LOG']:
-            msg = f'<b>🗂️ Name :</b> {escape(self.name)}'
-            msg += f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+            msg = f'<b>🗂️ Name :</b> <code>{escape(self.name)}</code>'
+            msg += f'\n\n<b>📦 Size </b>: <code>{get_readable_file_size(size)}</code>'
             msg += f'\n\n<b>☑ #Leech_Completed</b>'
             await self.__sent_msg.reply(text=msg, quote=True, disable_web_page_preview=True)
         LOGGER.info(f"Leech Completed: {self.name}")
