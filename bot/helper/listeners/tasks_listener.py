@@ -402,7 +402,8 @@ class MirrorLeechListener:
         LOGGER.info(f'Done Uploading {name}')
         lmsg = f'<b>🗂️ Name </b>: <code>{escape(name)}</code>'
         gmsg = f'<b>✅ Your job is done.</b>'
-        msg = f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+        msg = f'\n\n<b>🗂️ Name </b>: <code>{escape(name)}</code>'
+        msg += f'\n<b>📦 Size </b>: {get_readable_file_size(size)}'
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<b>Path </b>: {rclonePath}'
