@@ -83,8 +83,8 @@ async def get_user_settings(from_user):
         'split_size', False) or config_dict['LEECH_SPLIT_SIZE']
     split_size = get_readable_file_size(split_size)
 
-    if user_dict.get('equal_splits', False) or 'equal_splits' not in user_dict and config_dict['EQUAL_SPLITS']:
-        equal_splits = 'Enabled'
+#    if user_dict.get('equal_splits', False) or 'equal_splits' not in user_dict and config_dict['EQUAL_SPLITS']:
+#        equal_splits = 'Enabled'
     else:
         equal_splits = 'Disabled'
 
@@ -93,8 +93,8 @@ async def get_user_settings(from_user):
     else:
         media_group = 'Disabled'
 
-    buttons.ibutton("Rclone", f"userset {user_id} rcc")
-    rccmsg = "Exists" if await aiopath.exists(rclone_path) else "Not Exists"
+#    buttons.ibutton("Rclone", f"userset {user_id} rcc")
+#    rccmsg = "Exists" if await aiopath.exists(rclone_path) else "Not Exists"
 
     if user_dict:
         buttons.ibutton("Reset Setting", f"userset {user_id} reset_all")
@@ -107,8 +107,8 @@ async def get_user_settings(from_user):
 <b>Premium Status :</b> <b>{IS_PREMIUM_USER}</b>
 
 <b>Leech Type       :</b> <b>{ltype}</b>
-<b>Leech Prefix     :</b> <b>{escape(lprefix)}</b>
-<b>Leech Remname  :</b> <b>{lremname}</b>
+<b>Leech Prefix     :</b> <code>{escape(lprefix)}</code>
+<b>Leech Remname  :</b> <code>{lremname}</code>
 <b>Leech Split Size :</b> <b>{split_size}</b>
 
 <b>Equal Splits     :</b> <b>{equal_splits}</b>
@@ -118,7 +118,7 @@ async def get_user_settings(from_user):
 <b>YT-DLP Options   :</b> <b>{escape(ytopt)}</b>
 <b>Rclone Config    :</b> <b>{rccmsg}</b>
 
-<b>User Dump        :</b> <b>{user_dump}</b>
+<b>User Dump        :</b> <code>{user_dump}</code>
 """
     return text, buttons.build_menu(1)
 
@@ -398,14 +398,11 @@ Timeout: 60 sec
             buttons.ibutton("Close", f"userset {user_id} close")
         rmsg = f'''
 Send Leech Prefix. Timeout: 60 sec
+
 Examples:
 1. <code>{escape('@Channel_Name')}</code> 
 This will give output as:
-<b>Join: @Channel_Name</b>  <code>700MB.mkv</code>.
-
-2. <code>{escape('<code>@Channel_Name</code>')}</code> 
-This will give output as:
-<code>Join: @Channel_Name</code> <code>700MB.mkv</code>.
+<code>@Channel_Name Avatar 2 (2023) English 700MB.mkv</code>.
 
 Check all available formatting options <a href="https://core.telegram.org/bots/api#formatting-options">HERE</a>.
         '''
