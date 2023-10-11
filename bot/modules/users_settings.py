@@ -106,7 +106,7 @@ async def get_user_settings(from_user):
 
 <b>Premium Status : {IS_PREMIUM_USER}</b>
 <b>Leech Split Size : {split_size}</b>
-<b>Leech Type :</b> {ltype}
+<b>Leech Type : {ltype}</b>
 
 <b>Leech Prefix :</b> <code>{escape(lprefix)}</code>
 <b>Leech Remname :</b> <code>{lremname}</code>
