@@ -1,6 +1,7 @@
 from telegram.ext import CommandHandler, CallbackQueryHandler
 from time import sleep
 from threading import Thread
+from pyrogram.filters import regex
 
 from bot import download_dict, dispatcher, download_dict_lock, OWNER_ID, user_data
 from bot.helper.telegram_helper.bot_commands import BotCommands
