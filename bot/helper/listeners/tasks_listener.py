@@ -402,7 +402,7 @@ class MirrorLeechListener:
         LOGGER.info(f'Done Uploading {name}')
         lmsg = f'<b>🗂️ Name </b>: <code>{escape(name)}</code>'
         gmsg = f'<b>✅ Your job is done.</b>'
-        msg += f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+        msg = f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<b>Path </b>: {rclonePath}'
@@ -434,7 +434,7 @@ class MirrorLeechListener:
                         await sendMessage(self.message, lmsg + msg + fmsg)
             else:
                 if not files:
-                    await sendMessage(self.message, lmsg + gmsg + msg + msg_)
+                    await sendMessage(self.message, gmsg + msg + msg_)
                     if self.logMessage:
                         await sendMessage(self.logMessage, lmsg + msg)
                 elif self.dmMessage and not config_dict['LEECH_LOG']:
@@ -449,14 +449,14 @@ class MirrorLeechListener:
                         if len(fmsg.encode() + msg.encode()) > 4000:
                             if self.logMessage:
                                 await sendMessage(self.logMessage, lmsg + msg + fmsg)
-                            await sendMessage(self.dmMessage, lmsg + gmsg + msg + fmsg)
+                            await sendMessage(self.dmMessage, gmsg + msg + fmsg)
                             await sleep(1)
                             fmsg = '\n'
                     if fmsg != '\n':
                         if self.logMessage:
                             await sendMessage(self.logMessage, lmsg + msg + fmsg)
-                        await sendMessage(self.message, lmsg + gmsg + msg + msg_)
-                        await sendMessage(self.dmMessage, lmsg + gmsg + msg + fmsg)
+                        await sendMessage(self.message, gmsg + msg + msg_)
+                        await sendMessage(self.dmMessage, gmsg + msg + fmsg)
             if self.seed:
                 if self.newDir:
                     await clean_target(self.newDir)
