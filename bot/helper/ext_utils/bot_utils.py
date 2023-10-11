@@ -292,19 +292,19 @@ def get_readable_message():
                         chatid = str(download.message.chat.id)[4:]
                         if config_dict['EMOJI_THEME']:
                             msg += f'\n<b>🌐 Source: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
-                            msg += f"\n<b>🚫 Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                            msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}"
                         else:
                             msg += f'\n<b>Source: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
-                            msg += f"\n<b>Cancel: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"                 
+                            msg += f"\n<b>Cancel: </b>{BotCommands.CancelMirror}_{download.gid()}"                 
                     except:
                         pass
                 else:
                     if config_dict['EMOJI_THEME']:
-                        msg += f'\n<b>👤 User:</b> ️<code>{download.message.from_user.first_name}</code> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
-                        msg += f"\n<b>🚫 Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                        msg += f'\n<b>👤 User:</b>{download.message.from_user.first_name} | <b>Id:</b> <code>{download.message.from_user.id}</code>'
+                        msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}"
                     else:
                         msg += f'\n<b>User:</b> ️<code>{download.message.from_user.first_name}</code> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
-                        msg += f"\n<b>Cancel: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                        msg += f"\n<b>Cancel: </b>/{BotCommands.CancelMirror}_{download.gid()}"
 
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 if config_dict['EMOJI_THEME']:
@@ -315,7 +315,7 @@ def get_readable_message():
                     msg += f"\n<b>📎 Ratio: </b>{download.ratio()}"
                     msg += f" | <b>⏲️ Time: </b>{download.seeding_time()}"
                     msg += f"\n<b>⏳ Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
-                    msg += f"\n<b>🚫 Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                    msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}"
                 else:
                     msg += f"\n<b>Size: </b>{download.size()}"
                     msg += f"\n<b>Engine:</b> <code>qBittorrent</code>"
@@ -324,7 +324,7 @@ def get_readable_message():
                     msg += f"\n<b>Ratio: </b>{download.ratio()}"
                     msg += f" | <b> Time: </b>{download.seeding_time()}"
                     msg += f"\n<b>Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
-                    msg += f"\n<b></b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                    msg += f"\n<b></b>/{BotCommands.CancelMirror}_{download.gid()}"
             else:
                 if config_dict['EMOJI_THEME']:
                     msg += f"\n<b>⛓️ Engine:</b> {download.eng()}"
