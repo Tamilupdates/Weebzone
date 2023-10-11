@@ -108,9 +108,9 @@ async def get_user_settings(from_user):
 <b>Leech Split Size : {split_size}</b>
 <b>Leech Type : {ltype}</b>
 
+<b>Thumbnail :</b> <code>{thumbmsg}</code>
 <b>Leech Prefix :</b> <code>{escape(lprefix)}</code>
 <b>Leech Remname :</b> <code>{lremname}</code>
-<b>Thumbnail :</b> <code>{thumbmsg}</code>
 <b>User Dump :</b> <code>{user_dump}</code>
 <b>Media Group :</b> <code>{media_group}</code>
 <b>YT-DLP Options :</b> <code>{escape(ytopt)}</code>
