@@ -170,7 +170,7 @@ def get_readable_message():
         else:
             msg += f"\n<b>👤 User:</b> {tag}"
         msg += f"<b> | Mode:</b> <a href='{download.message.link}'>{download.extra_details['mode']}</a>"
-        msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}\n\n"
+        msg += f"\n<b>🚫 Cancel:</b> /{BotCommands.CancelMirror}_{download.gid()}\n"
     if len(msg) == 0:
         return None, None
     def convert_speed_to_bytes_per_second(spd):
@@ -190,7 +190,7 @@ def get_readable_message():
             dl_speed += speed_in_bytes_per_second
         elif tstatus == MirrorStatus.STATUS_UPLOADING or tstatus == MirrorStatus.STATUS_SEEDING:
             up_speed += speed_in_bytes_per_second
-    msg += "____________________________"
+    msg += "\n____________________________"
     msg += f"\n\n<b>💿 FREE: </b>{get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
     msg += f"<b> | 🔻 DL: </b>{get_readable_file_size(dl_speed)}/s"
     msg += f"\n<b>🟢 UP: </b>{get_readable_time(time() - botStartTime)}"
