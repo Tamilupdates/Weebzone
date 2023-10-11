@@ -16,8 +16,7 @@ from tenacity import (RetryError, retry, retry_if_exception_type,
                       stop_after_attempt, wait_exponential)
 
 from bot import GLOBAL_EXTENSION_FILTER, IS_PREMIUM_USER, bot, config_dict, user, user_data
-from bot.helper.ext_utils.bot_utils import (extra_btns, get_readable_file_size,
-                                            get_readable_time, sync_to_async)
+from bot.helper.ext_utils.bot_utils import get_readable_file_size, sync_to_async
 from bot.helper.ext_utils.fs_utils import clean_unwanted, get_base_name, is_archive
 from bot.helper.ext_utils.leech_utils import get_document_type, get_media_info, take_ss, remove_unwanted, get_audio_thumb
 
@@ -273,11 +272,9 @@ class TgUploader:
             await self.__listener.onUploadError('Files Corrupted or unable to upload.')
             return
         if config_dict['LEECH_LOG']:
-            msg = f'<b>🗂️ Name :</b> <code>{escape(self.name)}</code>'
-            msg = f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
-            msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
-            msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
-            msg += f'\n<b>#Leech_Completed</b>'
+            msg = f'<b>🗂️ Name :</b> <code>{escape(self.name)}</code>\n\n'
+            msg = f'\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+            msg += f'\n\n<b>#Leech_Completed</b>'
             await self.__sent_msg.reply(text=msg, quote=True, disable_web_page_preview=True)
         LOGGER.info(f"Leech Completed: {self.name}")
         await self.__listener.onUploadComplete(None, size, self.__msgs_dict, self.__total_files, self.__corrupted, self.name)
