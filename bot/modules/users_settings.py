@@ -104,16 +104,16 @@ async def get_user_settings(from_user):
     text = f"""
 <b><u>User Settings of {name}</u></b>
 
-<b>Premium Status :</b> <b>{IS_PREMIUM_USER}</b>
+<b>Premium Status : {IS_PREMIUM_USER}</b>
+<b>Leech Split Size : {split_size}</b>
 
-<b>Leech Type       :</b> <b>{ltype}</b>
-<b>Leech Prefix     :</b> <code>{escape(lprefix)}</code>
-<b>Leech Remname    :</b> <code>{lremname}</code>
-<b>Leech Split Size :</b> <code>{split_size}</code>
-<b>Thumbnail        :</b> <b>{thumbmsg}</b>
-<b>User Dump        :</b> <code>{user_dump}</code>
-<b>Media Group      :</b> <b>{media_group}</b>
-<b>YT-DLP Options   :</b> <code>{escape(ytopt)}</code>
+<b>Leech Type :</b> <code>{ltype}</b>
+<b>Leech Prefix :</b> <code>{escape(lprefix)}</code>
+<b>Leech Remname :</b> <code>{lremname}</code>
+<b>Thumbnail :</b> <code>{thumbmsg}</code>
+<b>User Dump :</b> <code>{user_dump}</code>
+<b>Media Group :</b> <code>{media_group}</code>
+<b>YT-DLP Options :</b> <code>{escape(ytopt)}</code>
 """
     return text, buttons.build_menu(1)
 
