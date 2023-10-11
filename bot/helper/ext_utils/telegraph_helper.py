@@ -103,5 +103,5 @@ class TelegraphHelper:
 
 
 telegraph = TelegraphHelper(
-    'Z-Mirror', 'https://github.com/Tamilupdates/weebzone')
+    'KPS Bots', 'https://telegram.me/KPSBots')
 bot_loop.run_until_complete(telegraph.create_account())
