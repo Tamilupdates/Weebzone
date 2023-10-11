@@ -91,9 +91,9 @@ def cancel_all_update(update, context):
 
 
 dispatcher.add_handler(MessageHandler(cancel_mirror, regex(
-    f"^/{BotCommands.CancelMirror}(_\w+)?(?!all)") & CustomFilters.authorized_chat | CustomFilters.authorized_user))
+    f"^/{BotCommands.CancelMirror}(_\w+)?(?!all)") & CustomFilters.authorized_chat))
 dispatcher.add_handler(MessageHandler(cancell_all_buttons, command(
-    BotCommands.CancelAllCommand) & CustomFilters.owner_filter | CustomFilters.sudo_user))
+    BotCommands.CancelAllCommand) & CustomFilters.sudo_user))
 dispatcher.add_handler(CallbackQueryHandler(cancel_all_update, regex(r"^canall")))
 
 
