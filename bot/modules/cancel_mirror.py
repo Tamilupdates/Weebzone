@@ -95,7 +95,7 @@ cancel_mirror_handler = CommandHandler(cancel_mirror,
 cancel_all_handler = CommandHandler(BotCommands.CancelAllCommand, cancell_all_buttons,
                                    filters=CustomFilters.owner_filter | CustomFilters.sudo_user)
 
-cancel_all_buttons_handler = CallbackQueryHandler(cancel_all_update, filters=regex(r"^canall"))
+cancel_all_buttons_handler = CallbackQueryHandler(cancel_all_update, filters=regex("^canall"))
 
 dispatcher.add_handler(cancel_all_handler)
 dispatcher.add_handler(cancel_mirror_handler)
