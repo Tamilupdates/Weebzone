@@ -18,13 +18,13 @@ from bot.helper.ext_utils.db_handler import DbManger
 from bot.helper.ext_utils.bot_utils import update_user_ldata, is_paid, is_sudo, get_readable_file_size, getUserTDs, getdailytasks
 
 handler_dict = {}
-example_dict = {'prefix':'1. <code>@your_channel_username or Anything</code>', 
-                'mprefix':'1. <code>@your_channel_username or Anything</code>', 
-                'suffix':'1. <code>@your_channel_username</code>', 
-                'msuffix':'1. <code>@your_channel_username</code>', 
-                'caption': '1. <code><b>{filename}\n\nJoin Now : @your_channel_username</b></code>', 
-                'userlog':'1. <code>-100xxxxxx or Channel ID</code>', 
-                'usertd':'1. <code>UserTD_Name 1TSYgS-88SkhkSuoS-KHSi7%^&s9HKj https://1.xyz.workers.dev/0:/Leecher</code>\n<b> Do not forget to add '+config_dict['SA_MAIL']+' to your TD as Content Manager</b>',
+example_dict = {'prefix':'<code>@your_channel_username or Anything</code>', 
+                'mprefix':'<code>@your_channel_username or Anything</code>', 
+                'suffix':'<code>@your_channel_username</code>', 
+                'msuffix':'<code>@your_channel_username</code>', 
+                'caption': '<code><b>{filename}\n\nJoin Now : @your_channel_username</b></code>', 
+                'userlog':'<code>-100xxxxxx or Channel ID</code>', 
+                'usertd':'<code>UserTD_Name 1TSYgS-88SkhkSuoS-KHSi7%^&s9HKj https://1.xyz.workers.dev/0:/Leecher</code>\n<b> Do not forget to add '+config_dict['SA_MAIL']+' to your TD as Content Manager</b>',
                 'remname':'<b>Syntax:</b> previousname:newname:times|previousname:newname:times\n\n1. Fork:Star|Here:Now:1|WZML\n\n<b>Output :</b> Star Now : Click Here.txt', 
                 'mremname':'<b>Syntax:</b> previousname:newname:times|previousname:newname:times\n\n1. Fork:Star|Here:Now:1|WZML\n\n<b>Output :</b> Star Now : Click Here.txt', 
                 'imdb_temp':'Make Custom Template.', 
