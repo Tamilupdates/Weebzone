@@ -83,10 +83,10 @@ async def get_user_settings(from_user):
         'split_size', False) or config_dict['LEECH_SPLIT_SIZE']
     split_size = get_readable_file_size(split_size)
 
-#    if user_dict.get('equal_splits', False) or 'equal_splits' not in user_dict and config_dict['EQUAL_SPLITS']:
-#        equal_splits = 'Enabled'
-#    else:
-#        equal_splits = 'Disabled'
+    if user_dict.get('equal_splits', False) or 'equal_splits' not in user_dict and config_dict['EQUAL_SPLITS']:
+        equal_splits = 'Enabled'
+    else:
+        equal_splits = 'Disabled'
 
     if user_dict.get('media_group', False) or 'media_group' not in user_dict and config_dict['MEDIA_GROUP']:
         media_group = 'Enabled'
@@ -106,8 +106,8 @@ async def get_user_settings(from_user):
 
 <b>Premium Status : {IS_PREMIUM_USER}</b>
 <b>Leech Split Size : {split_size}</b>
+<b>Leech Type :</b> {ltype}
 
-<b>Leech Type :</b> <code>{ltype}</b>
 <b>Leech Prefix :</b> <code>{escape(lprefix)}</code>
 <b>Leech Remname :</b> <code>{lremname}</code>
 <b>Thumbnail :</b> <code>{thumbmsg}</code>
