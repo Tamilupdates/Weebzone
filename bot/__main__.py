@@ -374,7 +374,7 @@ async def restart_notification():
             for cid, data in notifier_dict.items():
                 msg = '<b>Restarted Successfully!</b>' if cid == chat_id else '<b>Bot Restarted!</b>'
                 for tag, links in data.items():
-                    msg += f"\n\n👤 {tag} Do your tasks again. \n"
+                    msg += f"\n👤 {tag} Do your tasks again. \n"
                     for index, link in enumerate(links, start=1):
                         msg += f" {index}: {link} \n"
                         if len(msg.encode()) > 4000:
