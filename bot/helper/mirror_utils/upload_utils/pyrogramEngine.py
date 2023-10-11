@@ -274,7 +274,7 @@ class TgUploader:
         if config_dict['LEECH_LOG']:
             msg = f'<b>🗂️ Name :</b> <code>{escape(self.name)}</code>'
             msg += f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
-            msg += f'\n\n<b>#Leech_Completed</b>'
+            msg += f'\n\n<b>☑ #Leech_Completed</b>'
             await self.__sent_msg.reply(text=msg, quote=True, disable_web_page_preview=True)
         LOGGER.info(f"Leech Completed: {self.name}")
         await self.__listener.onUploadComplete(None, size, self.__msgs_dict, self.__total_files, self.__corrupted, self.name)
