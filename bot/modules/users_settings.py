@@ -85,8 +85,8 @@ async def get_user_settings(from_user):
 
 #    if user_dict.get('equal_splits', False) or 'equal_splits' not in user_dict and config_dict['EQUAL_SPLITS']:
 #        equal_splits = 'Enabled'
-    else:
-        equal_splits = 'Disabled'
+#    else:
+#        equal_splits = 'Disabled'
 
     if user_dict.get('media_group', False) or 'media_group' not in user_dict and config_dict['MEDIA_GROUP']:
         media_group = 'Enabled'
