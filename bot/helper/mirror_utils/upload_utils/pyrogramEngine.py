@@ -272,8 +272,11 @@ class TgUploader:
             await self.__listener.onUploadError('Files Corrupted or unable to upload.')
             return
         if config_dict['LEECH_LOG']:
-            msg = f'<b>🗂️ Name :</b> <code>{escape(self.name)}</code>\n\n'
-            msg += f'<b>#Leech_Completed</b>\n'
+            msg = f'<b>🗂️ Name :</b> <code>{escape(self.name)}</code>'
+            msg = f'\n\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+            msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
+            msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
+            msg += f'\n<b>#Leech_Completed</b>'
             await self.__sent_msg.reply(text=msg, quote=True, disable_web_page_preview=True)
         LOGGER.info(f"Leech Completed: {self.name}")
         await self.__listener.onUploadComplete(None, size, self.__msgs_dict, self.__total_files, self.__corrupted, self.name)
