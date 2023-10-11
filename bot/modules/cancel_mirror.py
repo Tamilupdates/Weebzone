@@ -1,7 +1,6 @@
-from telegram.ext import MessageHandler, CallbackQueryHandler
+from telegram.ext import CommandHandler, CallbackQueryHandler
 from time import sleep
 from threading import Thread
-from pyrogram.filters import command, regex
 
 from bot import download_dict, dispatcher, download_dict_lock, OWNER_ID, user_data
 from bot.helper.telegram_helper.bot_commands import BotCommands
@@ -29,7 +28,7 @@ def cancel_mirror(update, context):
             return sendMessage("This is not an active task!", context.bot, update.message)
     elif len(context.args) == 0:
         msg = f"Reply to an active <code>/{BotCommands.MirrorCommand}</code> message which \
-                was used to start the download or send <code>/{BotCommands.CancelMirror}_GID</code> to cancel it!"
+                was used to start the download or send <code>/{BotCommands.CancelMirror} GID</code> to cancel it!"
         return sendMessage(msg, context.bot, update.message)
 
     if OWNER_ID != user_id and dl.message.from_user.id != user_id and \
@@ -90,10 +89,13 @@ def cancel_all_update(update, context):
 
 
 
-dispatcher.add_handler(MessageHandler(cancel_mirror, regex(
-    f"^/{BotCommands.CancelMirror}(_\w+)?(?!all)") & CustomFilters.authorized_chat))
-dispatcher.add_handler(MessageHandler(cancell_all_buttons, command(
-    BotCommands.CancelAllCommand) & CustomFilters.sudo_user))
-dispatcher.add_handler(CallbackQueryHandler(cancel_all_update, regex(r"^canall")))
+cancel_mirror_handler = CommandHandler(BotCommands.CancelMirror, cancel_mirror,
+                                   filters=(CustomFilters.authorized_chat | CustomFilters.authorized_user))
+cancel_all_handler = CommandHandler(BotCommands.CancelAllCommand, cancell_all_buttons,
+                                   filters=CustomFilters.owner_filter | CustomFilters.sudo_user)
 
+cancel_all_buttons_handler = CallbackQueryHandler(cancel_all_update, pattern="canall")
 
+dispatcher.add_handler(cancel_all_handler)
+dispatcher.add_handler(cancel_mirror_handler)
+dispatcher.add_handler(cancel_all_buttons_handler)
