@@ -552,8 +552,8 @@ class MirrorLeechListener:
         msg = f"Sorry {self.tag}!\nYour download has been stopped."
         msg += f"\n\n<b>🗯 Reason  </b>: {escape(str(error))}"
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f'\n<b>👤 Added By </b>: {self.tag}'
         msg += f"\n<b>📤 Upload  </b>: {self.extra_details['mode']}"
+        msg += f'\n<b>👤 Added </b>: {self.tag}'
         tlmsg = await sendMessage(self.message, msg, button)
         if self.logMessage:
             await sendMessage(self.logMessage, msg, button)
@@ -597,8 +597,8 @@ class MirrorLeechListener:
                 self.sameDir.remove(self.uid)
         msg = f"{self.tag} {escape(str(error))}"
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f'\n<b>👤 Added By </b>: {self.tag}'
         msg += f"\n<b>📤 Upload  </b>: {self.extra_details['mode']}"
+        msg += f'\n<b>👤 Added </b>: {self.tag}'
         tlmsg = await sendMessage(self.message, msg)
         if self.logMessage:
             await sendMessage(self.logMessage, msg)
