@@ -420,7 +420,7 @@ class MirrorLeechListener:
                     if self.logMessage:
                         await sendMessage(self.logMessage,  msg)
                 else:
-
+                    fmsg = '\n'
                     if fmsg != '\n':
                         if self.logMessage:
                             await sendMessage(self.logMessage, msg + fmsg)
@@ -436,7 +436,7 @@ class MirrorLeechListener:
                     if self.logMessage:
                         await sendMessage(self.logMessage, msg)
                 else:
-
+                    fmsg = '\n'
                     if fmsg != '\n':
                         if self.logMessage:
                             await sendMessage(self.logMessage, msg + fmsg)
