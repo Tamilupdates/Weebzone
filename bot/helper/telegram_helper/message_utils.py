@@ -237,7 +237,7 @@ async def sendLogMessage(message, link, tag):
                 return await reply_to.copy(log_chat, caption=caption)
         msg = ''
         if isSuperGroup:
-            msg+=f'<b><a href="{message.link}">🔗 Source Link </a></b>: '
+            msg+=f'<b><a href="{message.link}">🔗 Source Link</a></b>: '
         msg += f'<code>{link}</code>\n\n<b>👤 Added </b>: {tag}\n'
         msg += f'<b>💡 User ID </b>: <code>{message.from_user.id}</code>'
         return await message._client.send_message(log_chat, msg, disable_web_page_preview=True)
