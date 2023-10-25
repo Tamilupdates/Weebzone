@@ -409,7 +409,7 @@ class MirrorLeechListener:
         msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'
         buttons = ButtonMaker()
         if self.isLeech:
-            msg += f'\n<b>📂 Total Files </b>: {folders}\n'
+            msg += f'\n<b>📂 Total Files </b>: {folders}'
             if mime_type != 0:
                 msg += f'<b>❌ Corrupted Files</b> : {mime_type}\n'
             msg_ = '\n<b><i>Files has been sent in your DM.</i></b>'
