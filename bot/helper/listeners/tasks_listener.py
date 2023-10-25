@@ -402,8 +402,8 @@ class MirrorLeechListener:
         LOGGER.info(f'Done Uploading {name}')
         gmsg = f'<b>✅ Your job is done.</b>'
         msg = f'\n\n<b>🗂️ Name </b>: <code>{escape(name)}</code>'
-        msg += f'\n<b>👤 User </b>: {self.tag}'
         msg += f'\n<b>📦 Size </b>: {get_readable_file_size(size)}'
+        msg += f'\n<b>👤 User </b>: {self.tag}'
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<b>Path </b>: {rclonePath}'
@@ -554,6 +554,7 @@ class MirrorLeechListener:
                 self.sameDir['total'] -= 1
         msg = f"Sorry {self.tag}!\nYour download has been stopped."
         msg += f"\n\n<b>🗯 Reason  </b>: {escape(str(error))}"
+        msg += f'\n<b>👤 User </b>: {self.tag}'
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<b>📤 Upload  </b>: {self.extra_details['mode']}"
         tlmsg = await sendMessage(self.message, msg, button)
@@ -597,8 +598,9 @@ class MirrorLeechListener:
             count = len(download_dict)
             if self.uid in self.sameDir:
                 self.sameDir.remove(self.uid)
-        msg = f"{self.tag} {escape(str(error))}\n"
-        msg += f"<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
+        msg = f"{self.tag} {escape(str(error))}"
+        msg += f'\n<b>👤 User </b>: {self.tag}'
+        msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
         msg += f"\n<b>📤 Upload  </b>: {self.extra_details['mode']}"
         tlmsg = await sendMessage(self.message, msg)
         if self.logMessage:
