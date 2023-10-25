@@ -228,7 +228,13 @@ async def sendLogMessage(message, link, tag):
     try:
         isSuperGroup = message.chat.type in [
             message.chat.type.SUPERGROUP, message.chat.type.CHANNEL]
-
+        if reply_to := message.reply_to_message:
+            if not reply_to.text:
+                caption = ''
+                if isSuperGroup:
+                    caption+=f'<b><a href="{message.link}">Source</a></b> | '
+                caption+=f'<b>👤 Added </b>: {tag}\n<b>💡 User ID</b>: <code>{message.from_user.id}</code>'
+                return await reply_to.copy(log_chat, caption=caption)
         msg = ''
         if isSuperGroup:
             msg+=f'<b><a href="{message.link}">🔗 Source Link </a></b>: '
