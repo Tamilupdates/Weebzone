@@ -419,20 +419,12 @@ class MirrorLeechListener:
                     await sendMessage(self.message, msg)
                     if self.logMessage:
                         await sendMessage(self.logMessage,  msg)
-#                else:
-#                    fmsg = '\n'
-#                    for index, (link, name) in enumerate(files.items(), start=1):
-#                        fmsg += f"{index}. <a href='{link}'>{name}</a>\n"
-#                        if len(fmsg.encode() + msg.encode()) > 4000:
-#                            if self.logMessage:
-#                                await sendMessage(self.logMessage, msg + fmsg)
-#                            await sendMessage(self.message, msg + fmsg)
-#                            await sleep(1)
-#                            fmsg = '\n'
-#                    if fmsg != '\n':
-#                        if self.logMessage:
-#                            await sendMessage(self.logMessage, msg + fmsg)
-#                        await sendMessage(self.message, msg + fmsg)
+                else:
+
+                    if fmsg != '\n':
+                        if self.logMessage:
+                            await sendMessage(self.logMessage, msg + fmsg)
+                        await sendMessage(self.message, msg + fmsg)
             else:
                 if not files:
                     await sendMessage(self.message, gmsg + msg + msg_)
@@ -443,21 +435,13 @@ class MirrorLeechListener:
                     await sendMessage(self.message, gmsg + msg + msg_)
                     if self.logMessage:
                         await sendMessage(self.logMessage, msg)
-#                else:
-#                    fmsg = '\n'
-#                    for index, (link, name) in enumerate(files.items(), start=1):
-#                        fmsg += f"{index}. <a href='{link}'>{name}</a>\n"
-#                        if len(fmsg.encode() + msg.encode()) > 4000:
-#                            if self.logMessage:
-#                                await sendMessage(self.logMessage, msg + fmsg)
-#                            await sendMessage(self.dmMessage, gmsg + msg + fmsg)
-#                            await sleep(1)
-#                            fmsg = '\n'
-#                    if fmsg != '\n':
-#                        if self.logMessage:
-#                            await sendMessage(self.logMessage, msg + fmsg)
-#                        await sendMessage(self.message, gmsg + msg + msg_)
-#                        await sendMessage(self.dmMessage, gmsg + msg + fmsg)
+                else:
+
+                    if fmsg != '\n':
+                        if self.logMessage:
+                            await sendMessage(self.logMessage, msg + fmsg)
+                        await sendMessage(self.message, gmsg + msg + msg_)
+                        await sendMessage(self.dmMessage, gmsg + msg + fmsg)
             if self.seed:
                 if self.newDir:
                     await clean_target(self.newDir)
