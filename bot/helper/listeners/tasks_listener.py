@@ -404,7 +404,6 @@ class MirrorLeechListener:
         msg = f'\n\n<b>🗂️ Name </b>: <code>{escape(name)}</code>'
         msg += f'\n<b>📦 Size </b>: {get_readable_file_size(size)}'
         msg += f"\n<b>⏳ Elapsed </b>: {get_readable_time(time() - self.extra_details['startTime'])}"
-        msg += f'\n<b>👤 Added By </b>: {self.tag}'
         msg += f"\n<b>📤 Upload </b>: {self.extra_details['mode']}"
         _msg = '' if rclonePath == '' else f'\n\n<b>Path </b>: {rclonePath}'
         msg_ = '\n\n<b><i>Link has been sent in your DM.</i></b>'
@@ -421,14 +420,13 @@ class MirrorLeechListener:
                         await sendMessage(self.logMessage,  msg)
                 else:
                     fmsg = '\n'
-                    for index, (link, name) in enumerate(files.items(), start=1):
-                        fmsg += f"{index}. <a href='{link}'>{name}</a>\n"
-                        if len(fmsg.encode() + msg.encode()) > 4000:
-                            if self.logMessage:
-                                await sendMessage(self.logMessage, msg + fmsg)
-                            await sendMessage(self.message, msg + fmsg)
-                            await sleep(1)
-                            fmsg = '\n'
+                    fmsg+= f'<b>👤 Added By </b>: {self.tag}'
+                    if len(fmsg.encode() + msg.encode()) > 4000:
+                        if self.logMessage:
+                            await sendMessage(self.logMessage, msg + fmsg)
+                        await sendMessage(self.message, msg + fmsg)
+                        await sleep(1)
+                        fmsg = '\n'
                     if fmsg != '\n':
                         if self.logMessage:
                             await sendMessage(self.logMessage, msg + fmsg)
@@ -445,14 +443,17 @@ class MirrorLeechListener:
                         await sendMessage(self.logMessage, msg)
                 else:
                     fmsg = '\n'
-                    for index, (link, name) in enumerate(files.items(), start=1):
-                        fmsg += f"{index}. <a href='{link}'>{name}</a>\n"
-                        if len(fmsg.encode() + msg.encode()) > 4000:
-                            if self.logMessage:
-                                await sendMessage(self.logMessage, msg + fmsg)
-                            await sendMessage(self.dmMessage, gmsg + msg + fmsg)
-                            await sleep(1)
-                            fmsg = '\n'
+                    fmsg+= f'<b>👤 Added By </b>: {self.tag}'
+                    if len(fmsg.encode() + msg.encode()) > 4000:
+                        if self.logMessage:
+                            await sendMessage(self.logMessage, msg + fmsg)
+                        await sendMessage(self.message, msg + fmsg)
+                        await sleep(1)
+                        fmsg = '\n'
+                    if fmsg != '\n':
+                        if self.logMessage:
+                            await sendMessage(self.logMessage, msg + fmsg)
+                        await sendMessage(self.message, msg + fmsg)
                     if fmsg != '\n':
                         if self.logMessage:
                             await sendMessage(self.logMessage, msg + fmsg)
