@@ -415,9 +415,9 @@ class MirrorLeechListener:
             msg_ = '\n<b><i>Files has been sent in your DM.</i></b>'
             if not self.dmMessage:
                 if not files:
-                    await sendMessage(self.message, msg)
+                    await sendMessage(self.message, gmsg + msg + msg_)
                     if self.logMessage:
-                        await sendMessage(self.logMessage,  msg)
+                        await sendMessage(self.logMessage, msg)
                 else:
                     fmsg = '\n'
                     fmsg+= f'<b>👤 Added By </b>: {self.tag}'
