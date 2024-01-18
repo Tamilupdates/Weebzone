@@ -55,7 +55,7 @@ async def stats(_, message, edit_mode=False):
     mem_p       = memory.percent
     swap        = swap_memory()
 
-    bot_stats = f'<b><i><u>Zee Bot Statistics</u></i></b>\n\n'\
+    bot_stats = f'<b><i><u>Bot Statistics</u></i></b>\n\n'\
                 f'<b>CPU  : {get_progress_bar_string(cpuUsage)}</b> {cpuUsage}%\n' \
                 f'<b>RAM  : {get_progress_bar_string(mem_p)}</b> {mem_p}%\n' \
                 f'<b>SWAP : {get_progress_bar_string(swap.percent)}</b> {swap.percent}%\n' \
@@ -65,7 +65,7 @@ async def stats(_, message, edit_mode=False):
                 f'<b>Downloaded      : </b> {recv}\n' \
                 f'<b>Total Bandwidth : </b> {tb}'
 
-    sys_stats = f'<b><i><u>Zee System Statistics</u></i></b>\n\n'\
+    sys_stats = f'<b><i><u>System Statistics</u></i></b>\n\n'\
                 f'<b>System Uptime:</b> <b>{sysTime}</b>\n' \
                 f'<b>CPU:</b> {get_progress_bar_string(cpuUsage)}<b> {cpuUsage}%</b>\n' \
                 f'<b>CPU Total Core(s):</b> <b>{cpu_count(logical=True)}</b>\n' \
@@ -188,7 +188,7 @@ async def send_bot_limits(_, query):
     UMT = 'Unlimited' if config_dict['USER_MAX_TASKS']  == '' else config_dict['USER_MAX_TASKS']
     BMT = 'Unlimited' if config_dict['QUEUE_ALL']       == '' else config_dict['QUEUE_ALL']
 
-    bot_limit = f'<b><i><u>Zee Bot Limitations</u></i></b>\n' \
+    bot_limit = f'<b><i><u>Bot Limitations</u></i></b>\n' \
                 f'<b>Torrent   : {TOR}</b> <b>GB</b>\n' \
                 f'<b>G-Drive   : {GDL}</b> <b>GB</b>\n' \
                 f'<b>Yt-Dlp    : {YTD}</b> <b>GB</b>\n' \
