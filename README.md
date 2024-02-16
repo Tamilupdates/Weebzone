@@ -491,8 +491,7 @@ list - Search files in Drive
 search - Search for torrents with API
 cancel - Cancel a task
 cancelall - Cancel all tasks
-stats - Bot Usage Stats
-s - All bot usage stats
+stats - All bot usage stats
 ping - or /p to Ping the Bot
 help - All cmds with description
 ```
